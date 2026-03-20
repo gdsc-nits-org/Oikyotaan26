@@ -4,3 +4,12 @@
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+@font-face {
+  font-family: 'Naluka';
+  src: url('/fonts/Naluka.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Naluka', sans-serif;
+}

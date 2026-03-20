@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Siddharth Ghosh",
+    "role": "UI UX Designer",
+    "image": "/team/member1.png",
+      "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/siddharth"
+  },
+  {
+    "name": "Rahul Das",
+    "role": "Frontend Developer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/in/siddharth"
+  },
+  {
+    "name": "Priya Sharma",
+    "role": "Backend Developer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/in/siddharth"
+  },  {
+    "name": "Siddharth Ghosh",
+    "role": "UI UX Designer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/in/siddharth"
+  },
+  {
+    "name": "Rahul Das",
+    "role": "Frontend Developer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/in/siddharth"
+  },
+  {
+    "name": "Priya Sharma",
+    "role": "Backend Developer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/in/siddharth"
+  },  {
+    "name": "Siddharth Ghosh",
+    "role": "UI UX Designer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/in/siddharth"
+  
+  },
+  {
+    "name": "Rahul Das",
+    "role": "Frontend Developer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+    "github":"https://github.com/in/siddharth"
+  },
+  {
+    "name": "Priya Sharma",
+    "role": "Backend Developer",
+    "image": "/team/member1.png",
+    "instagram": "https://instagram.com/siddharth",
+    "linkedin": "https://linkedin.com/in/siddharth",
+     "github":"https://github.com/in/siddharth"
+  }
+]

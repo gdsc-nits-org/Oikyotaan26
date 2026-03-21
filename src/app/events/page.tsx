@@ -7,7 +7,7 @@ export default function EventsPage() {
   const events = Array.isArray(eventsData) ? eventsData : [];
 
   return (
-    <main className="w-full min-h-screen bg-[#8A3123] overflow-x-hidden">
+    <main className="w-full min-h-screen bg-[#8A3123]">
       <HeroSection />
 
       {/* 1. items-start pins the cards to the LEFT side */}

@@ -7,12 +7,12 @@ export default function EventsPage() {
   const events = Array.isArray(eventsData) ? eventsData : [];
 
   return (
-    <main className="w-full min-h-screen bg-[#8A3123]">
+    <main className="w-full min-h-screen bg-[#8A3123] overflow-x-hidden">
       <HeroSection />
       {/* test change */}
       {/* 1. items-start pins the cards to the LEFT side xyz */}
       {/* 2. pl-[20px] lg:pl-[80px] sets the distance from the left edge */}
-      <section className="w-full flex flex-col items-start gap-1 md:gap-2 py-16 md:py-24 px-4 lg:pl-[120px]">
+      <section className="w-full flex flex-col items-center gap-1 md:gap-2 py-16 md:py-24 px-4">
           {events.map((event, index) => (
             <EventCard
               key={event.id || index}

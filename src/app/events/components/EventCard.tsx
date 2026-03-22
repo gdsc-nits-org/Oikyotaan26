@@ -61,12 +61,18 @@ export default function EventCard({ title, description, image, reverse = false }
               <div
                 className="absolute top-[30.8%] bottom-[31.5%] inset-x-[6%] 
                 md:inset-y-[10%] md:inset-x-[18%] 
-                bg-[#331818] flex flex-col items-center z-10 px-5 md:px-12 py-5 md:py-10 overflow-hidden"
+                bg-[#331818] flex flex-col items-center gap-2 min-[350px]:gap-3 md:gap-6 z-10 px-5 md:px-12 py-5 md:py-10 overflow-hidden"
               >
                 <h3
-                  className="text-[#F3CA4E] text-2xl md:text-5xl lg:text-6xl mb-3 md:mb-6 leading-none text-center w-full"
-                  style={{ fontFamily: "Naluka, sans-serif" }}
-                >
+  className="
+    text-[#F3CA4E] 
+    text-2xl md:text-5xl lg:text-6xl 
+    mb-3 md:mb-6 
+    leading-none text-center w-full
+    translate-y-[10px] min-[350px]:translate-y-0
+  "
+  style={{ fontFamily: "Naluka, sans-serif" }}
+>
                   {title}
                 </h3>
 

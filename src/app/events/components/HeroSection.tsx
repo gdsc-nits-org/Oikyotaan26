@@ -45,15 +45,23 @@ export default function HeroSection() {
           </h1>
 
           <h2
-            className="tracking-[0.04em] text-[34px] sm:text-[48px] md:text-[100px] -mt-1 md:-mt-3 text-center"
-            style={{
-              fontFamily: "Naluka",
-              textShadow: "0px 4px 4px rgba(0,0,0,0.25)"
-            }}
-          >
-            EVENTS
-          </h2>
-
+  className="
+    tracking-[0.19em] 
+    min-[380px]:tracking-[0.21em] 
+    sm:tracking-[0.04em] 
+    text-[34px] sm:text-[48px] md:text-[100px] 
+    -mt-1 md:-mt-3 text-center
+    translate-x-[4px] 
+    min-[380px]:translate-x-[2px] 
+    sm:translate-x-0
+  "
+  style={{
+    fontFamily: "Naluka",
+    textShadow: "0px 4px 4px rgba(0,0,0,0.25)"
+  }}
+>
+  EVENTS
+</h2>
           <img
             src="/events/bus.svg"
             alt="bus"

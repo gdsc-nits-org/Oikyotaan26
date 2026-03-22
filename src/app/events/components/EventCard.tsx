@@ -58,31 +58,44 @@ export default function EventCard({ title, description, image, reverse = false }
             >
 
               {/* CONTENT */}
-              <div
-                className="absolute top-[30.8%] bottom-[31.5%] inset-x-[6%] 
-                md:inset-y-[10%] md:inset-x-[18%] 
-                bg-[#331818] flex flex-col items-center gap-2 min-[350px]:gap-3 md:gap-6 z-10 px-5 md:px-12 py-5 md:py-10 overflow-hidden"
-              >
-                <h3
+             <div
+  className="absolute 
+  top-[30.8%] bottom-[31.5%] 
+  min-[380px]:top-[28%] min-[380px]:bottom-[28%]
+  inset-x-[1%] 
+  min-[380px]:inset-x-[2%] 
+  md:inset-x-[14%] lg:inset-x-[16%]
+  md:inset-y-[10%] 
+  bg-[#331818] 
+  flex flex-col items-center 
+  gap-2 min-[350px]:gap-3 md:gap-6 
+  z-10 px-5 md:px-12 py-5 md:py-10 
+  overflow-hidden"
+>
+
+<h3
   className="
     text-[#F3CA4E] 
+    tracking-[0.06em] sm:tracking-normal
     text-2xl md:text-5xl lg:text-6xl 
-    mb-3 md:mb-6 
+    mb-[10px] md:mb-6
     leading-none text-center w-full
-    translate-y-[10px] min-[350px]:translate-y-0
+    translate-y-[10px] 
+    min-[350px]:translate-y-[6px] 
+    min-[380px]:translate-y-[10px]
   "
   style={{ fontFamily: "Naluka, sans-serif" }}
 >
-                  {title}
-                </h3>
+  {title}
+</h3>
 
-                <div className="w-full h-full overflow-y-auto custom-scrollbar pr-1">
-                  <p className="text-white text-[12px] md:text-sm lg:text-[18px] leading-relaxed w-full text-justify px-4">
-                    {description}
-                  </p>
-                </div>
-              </div>
+<div className="w-full flex-1 overflow-hidden pr-1">
+  <p className="text-white text-[12px] md:text-sm lg:text-[18px] leading-relaxed w-full text-justify px-[10px] md:px-4 lg:px-10 line-clamp-6 min-[380px]:line-clamp-none md:line-clamp-none">
+  {description}
+</p>
+</div>
 
+</div>
               {/* FRAME + BORDER */}
               <div className="absolute inset-0 z-20 pointer-events-none">
 

@@ -1,5 +1,5 @@
 import team from "../data/team.json";
-import uiux from "../data/uiux.json";
+import uiux from "../data/core.json";
 import TeamCard from "../components/teamCard";
 export default function Home() {
   return (

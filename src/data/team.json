@@ -1,12 +1,12 @@
-[
-  {
-    "name": "Siddharth Ghosh",
-    "role": "UI UX Designer",
+[{
+    "name": "Rahul Das",
+    "role": "Frontend Developer",
     "image": "/team/member1.png",
-      "instagram": "https://instagram.com/siddharth",
+    "instagram": "https://instagram.com/siddharth",
     "linkedin": "https://linkedin.com/in/siddharth",
-    "github":"https://github.com/siddharth"
-  },
+    "github":"https://github.com/in/siddharth"
+  }
+ ,
   {
     "name": "Rahul Das",
     "role": "Frontend Developer",
@@ -55,19 +55,63 @@
   
   },
   {
-    "name": "Rahul Das",
-    "role": "Frontend Developer",
-    "image": "/team/member1.png",
-    "instagram": "https://instagram.com/siddharth",
-    "linkedin": "https://linkedin.com/in/siddharth",
-    "github":"https://github.com/in/siddharth"
+    "name": "Dhananjoy Das",
+    "role": "Web Head",
+    "image": "/team/dhananjoy.jpeg",
+    "instagram": "https://www.instagram.com/_.dhananjoy?igsh=OWdsc2RqeXpqeWls&utm_source=qr",
+    "linkedin": "https://www.linkedin.com/in/dhananjoydas733?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "github":"https://github.com/joycrypt"
+  },
+    {
+    "name": "Anurag  Sharma",
+    "role": "Junior Web Developer",
+    "image": "/team/anurag.jpeg",
+      "instagram": "https://www.instagram.com/anu__rag.sharma/",
+    "linkedin": "https://www.linkedin.com/in/anurag-sharma-nits/",
+    "github":"https://github.com/techy-geek/"
   },
   {
-    "name": "Priya Sharma",
-    "role": "Backend Developer",
-    "image": "/team/member1.png",
-    "instagram": "https://instagram.com/siddharth",
-    "linkedin": "https://linkedin.com/in/siddharth",
-     "github":"https://github.com/in/siddharth"
+    "name": "Debarpan Roy",
+    "role": "Junior Web Developer",
+    "image": "/team/debarpan.jpeg",
+    "instagram": "https://www.instagram.com/r.debarpan?igsh=MTBkdThxbWdzbG9sYQ==",
+    "linkedin": "https://www.linkedin.com/in/debarpan-roy-435876326",
+    "github":"https://github.com/debarpanRoy2006"
+  }
+  , {
+    "name": "Purbita Banik",
+    "role": "Junior Web Developer",
+    "image": "/team/purbita.jpeg",
+    "instagram": "error",
+    "linkedin": "https://www.linkedin.com/in/purbita-banik-075679316?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "github":"https://github.com/purbita23"
+  },{
+    "name": "Swarup",
+    "role": "Junior Web Developer",
+    "image": "/team/hiba.jpg",
+    "instagram": "https://www.instagram.com/swarup_81?igsh=MXEzdTZoc3UyZ21xbg==",
+    "linkedin": "https://www.linkedin.com/in/swarup81?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "github":"https://github.com/swarup081"
+  },{
+    "name": "Swastika Paul",
+    "role": "Junior Web Developer",
+    "image": "/team/swastika.jpeg",
+    "instagram": "https://www.instagram.com/swarup_81?igsh=MXEzdTZoc3UyZ21xbg==",
+    "linkedin": "https://www.linkedin.com/in/swarup81?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "github":"https://github.com/swarup081"
+  },{
+    "name": "Hiba Shaik",
+    "role": "Junior UI/UX Developer",
+    "image": "/team/hiba.jpg",
+    "instagram": "https://www.instagram.com/hibashaik154/",
+    "linkedin": "https://www.linkedin.com/in/hiba-shaik-48b231326/",
+    "github":"https://github.com/hiba-shaik"
+  },{
+    "name": "Shraddha yadav",
+    "role": "Junior UI/UX Developer",
+    "image": "/team/shradha.jpg",
+    "instagram": "https://www.instagram.com/_shraddha081?igsh=MTFtdmhsbzhsejRwdQ==",
+    "linkedin": "https://www.linkedin.com/in/shraddha-yadav-a3b0883b6?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "github":"https://github.com/shraddhayadav1"
   }
 ]

@@ -6,10 +6,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .custom-scrollbar::-webkit-scrollbar {
   display: none;
@@ -17,19 +19,51 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .custom-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 /* ===== REMOVE PAGE SCROLLBAR ===== */
 
 html {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Edge, Safari */
+  display: none;
+  /* Chrome, Edge, Safari */
 }
 
 body {
-  -ms-overflow-style: none; /* IE/Edge */
+  -ms-overflow-style: none;
+  /* IE/Edge */
 }
+
+/* ===== HERO WIGGLE ANIMATIONS (in-place, no position shift) ===== */
+@keyframes hero-wiggle {
+  0%, 100% { transform: rotate(-1deg) translateY(0px); }
+  25%       { transform: rotate(1deg)  translateY(-3px); }
+  50%       { transform: rotate(-0.8deg) translateY(2px); }
+  75%       { transform: rotate(0.8deg)  translateY(-1px); }
+}
+
+@keyframes hero-wiggle-slow {
+  0%, 100% { transform: rotate(0.8deg)  translateY(0px); }
+  25%       { transform: rotate(-1deg)  translateY(-4px); }
+  50%       { transform: rotate(0.6deg) translateY(2px); }
+  75%       { transform: rotate(-0.6deg) translateY(-2px); }
+}
+
+@keyframes hero-wiggle-cab {
+  0%, 100% { transform: rotate(-0.5deg) translateY(0px); }
+  33%       { transform: rotate(0.5deg)  translateY(-3px); }
+  66%       { transform: rotate(-0.3deg) translateY(1px); }
+}
+
+.hero-wiggle        { animation: hero-wiggle      3.6s ease-in-out infinite; }
+.hero-wiggle-slow   { animation: hero-wiggle-slow 4.3s ease-in-out infinite; }
+.hero-wiggle-alt    { animation: hero-wiggle-slow 3.9s ease-in-out infinite reverse; }
+.hero-wiggle-cab    { animation: hero-wiggle-cab  4.1s ease-in-out infinite; }

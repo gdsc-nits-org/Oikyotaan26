@@ -10,28 +10,30 @@ export default function HeroSection() {
       </div>
 
       {/* Clouds (Spread on mobile, Unified ceiling on desktop) */}
-      <img src="/landing/cloud5.png" alt="Cloud" className="absolute top-[-2%] sm:top-[2%] md:top-[8%] left-1/2 -translate-x-1/2 w-[130%] sm:w-[70%] md:w-[45%] max-w-[650px] z-[16] opacity-95 pointer-events-none drop-shadow-sm" />
-      {/* <img src="/landing/cloud1.png" alt="Cloud" className="absolute top-[28%] md:top-[8%] left-[-30%] sm:left-[-10%] md:left-[0%] w-[90%] sm:w-[90%] md:w-[45%] max-w-[700px] z-[2] md:z-[15] opacity-90 pointer-events-none" /> */}
-      <img src="/landing/cloud2.png" alt="Cloud" className="absolute top-[50%] md:top-[8%] right-[-20%] sm:right-[-10%] md:right-[5%] w-[80%] sm:w-[80%] md:w-[35%] max-w-[550px] z-[2] md:z-[15] opacity-90 pointer-events-none" />
-      <img src="/landing/cloud3.png" alt="Cloud" className="absolute top-[70%] sm:top-[15%] md:top-[25%] left-[-10%] sm:left-[20%] md:left-[25%] w-[80%] sm:w-[60%] md:w-[30%] max-w-[450px] z-[2] md:z-[15] opacity-80 pointer-events-none" />
+      <img src="/landing/cloud5.png" alt="Cloud" className="absolute top-[5%] sm:top-[2%] md:top-[8%] left-1/2 -translate-x-1/2 w-[130%] sm:w-[70%] md:w-[45%] max-w-[650px] z-[16] opacity-95 pointer-events-none drop-shadow-sm" />
 
+      {/* Cloud 1 - Now hidden on mobile, visible on sm and up */}
+      <img src="/landing/cloud1.png" alt="Cloud" className="hidden sm:block absolute top-[28%] md:top-[8%] left-[-30%] sm:left-[-10%] md:left-[0%] w-[90%] sm:w-[90%] md:w-[45%] max-w-[700px] z-[2] md:z-[15] opacity-90 pointer-events-none" />
+
+      <img src="/landing/cloud6.png" alt="Cloud" className="absolute top-[2%] md:top-[8%] right-[-20%] sm:right-[-10%] md:right-[5%] w-[80%] sm:w-[80%] md:w-[35%] max-w-[550px] z-[2] md:z-[15] opacity-90 pointer-events-none" />
+      <img src="/landing/cloud3.png" alt="Cloud" className="absolute top-[70%] sm:top-[15%] md:top-[15%] left-[-10%] sm:left-[20%] md:left-[25%] w-[80%] sm:w-[60%] md:w-[30%] max-w-[450px] z-[2] md:z-[15] opacity-80 pointer-events-none" />
       {/* Background Sticks */}
       <img src="/landing/stick 3.png" alt="Stick" className="absolute top-[35%] md:top-[30%] left-[-10%] md:left-[-2%] w-[25%] md:w-[15%] h-[30%] md:h-[50%] z-[5] object-contain rotate-[-15deg] opacity-90" />
       <img src="/landing/stick 4.png" alt="Stick" className="absolute top-[35%] md:top-[30%] right-[-10%] md:right-[0%] w-[25%] md:w-[12%] h-[30%] md:h-[60%] z-[5] object-contain rotate-[20deg] opacity-90" />
 
       {/* Center Badge */}
-      <div className="absolute top-[8%] md:top-[12%] left-1/2 -translate-x-1/2 w-[60vw] sm:w-[50vw] md:w-[30vw] max-w-[550px] min-w-[250px] md:min-w-[320px] z-[12] drop-shadow-2xl hover:scale-105 transition-transform duration-500">
-        <Image src="/landing/oikyotaanHandle.png" alt="Oikyotaan Badge" width={600} height={500} className="w-full h-auto object-contain" priority />
+      <div className="absolute top-[8%] md:top-[10%] left-1/2 -translate-x-1/2 w-[75vw] sm:w-[60vw] md:w-[38vw] max-w-[850px] min-w-[280px] md:min-w-[380px] z-[12] drop-shadow-2xl">
+        <Image src="/landing/oikyotaanHandle.png" alt="Oikyotaan Badge" width={10000} height={1000} className="hero-wiggle-alt w-full h-auto object-contain" priority />
       </div>
 
       {/* Left Artwork */}
-      <div className="absolute top-[32%] md:top-[28%] left-[-2%] md:left-[5%] w-[45vw] sm:w-[40vw] md:w-[25vw] max-w-[450px] min-w-[170px] md:min-w-[280px] z-[10] drop-shadow-2xl hover:scale-105 transition-transform duration-500">
-        <img src="/landing/leftImage.png" alt="Art Left" className="w-full h-auto object-contain" />
+      <div className="absolute top-[32%] md:top-[18%] left-[-1%] md:left-[5%] w-[45vw] sm:w-[40vw] md:w-[25vw] max-w-[450px] min-w-[170px] md:min-w-[280px] z-[10] drop-shadow-2xl">
+        <img src="/landing/leftImage.png" alt="Art Left" className="hero-wiggle w-full h-auto object-contain" />
       </div>
 
       {/* Right Artwork */}
-      <div className="absolute top-[32%] md:top-[28%] right-[-2%] md:right-[5%] w-[45vw] sm:w-[40vw] md:w-[28vw] max-w-[450px] min-w-[170px] md:min-w-[280px] z-[10] drop-shadow-2xl hover:scale-105 transition-transform duration-500">
-        <img src="/landing/rightImage.png" alt="Art Right" className="w-full h-auto object-contain" />
+      <div className="absolute top-[32%] md:top-[18%] right-[-1%] md:right-[5%] w-[45vw] sm:w-[40vw] md:w-[28vw] max-w-[450px] min-w-[170px] md:min-w-[280px] z-[10] drop-shadow-2xl">
+        <img src="/landing/rightImage.png" alt="Art Right" className="hero-wiggle-slow w-full h-auto object-contain" />
       </div>
 
       {/* Front Clouds Overlaying Elements */}
@@ -39,8 +41,8 @@ export default function HeroSection() {
       {/* <img src="/landing/cloud3.png" alt="Cloud" className="absolute top-[50%] md:top-[50%] left-[-10%] md:left-[10%] w-[80%] md:w-[35%] max-w-[600px] z-[15] opacity-95 pointer-events-none" /> */}
 
       {/* Bottom Cab */}
-      <div className="absolute bottom-[6%] md:bottom-[4%] left-1/2 -translate-x-1/2 w-[70vw] sm:w-[60vw] md:w-[35vw] max-w-[650px] min-w-[220px] md:min-w-[320px] z-[20] drop-shadow-2xl hover:scale-105 transition-transform duration-500">
-        <img src="/landing/cab.png" alt="Vintage Taxi" className="w-full h-auto object-contain" />
+      <div className="absolute bottom-[1%] md:bottom-[4%] left-1/2 -translate-x-1/2 w-[50vw] sm:w-[50vw] md:w-[30vw] max-w-[500px] min-w-[220px] md:min-w-[320px] z-[20] drop-shadow-xl">
+        <img src="/landing/cab.png" alt="Vintage Taxi" className="hero-wiggle-cab w-full h-auto object-contain" />
       </div>
 
       {/* Bottom Decorative Red Strip */}

@@ -13,31 +13,28 @@ export default function AboutOikyotaan() {
       <div className="absolute top-[0px] sm:top-0 right-0 w-[120px] sm:w-[180px] md:w-[260px] lg:w-[350px] opacity-90 z-20 pointer-events-none">
         <Image src="/landing/flower2.png" alt="Blossom Branch" width={400} height={300} className="w-full h-auto object-contain scale-x-[-1]" />
       </div>
-     <div className="relative mt-10 md:mt-16 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 z-20 hover:z-30">
+     <div className="relative mt-10 md:mt-16 flex items-center justify-center z-20" style={{ minHeight: "160px" }}>
 
         {/* ABOUT Stamp */}
-        <div className="relative p-2 bg-white rotate-[-8deg] drop-shadow-xl transition-transform z-20" style={{ filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.5))" }}>
-          <div className="absolute -inset-[6px] bg-[#FFFFFF]" style={{ maskImage: "radial-gradient(circle at 8px 8px, transparent 6px, black 6.5px)", maskSize: "16px 16px", maskPosition: "-6px -6px", WebkitMaskImage: "radial-gradient(circle at 6px 6px, transparent 6px, black 6.5px)", WebkitMaskSize: "16px 16px", WebkitMaskPosition: "-6px -6px" }}></div>
-          <div className="relative w-full h-full bg-[#E4A01A] px-8 py-6 md:px-8 md:py-10 flex items-center justify-center pointer-events-none">
-            <h1
-              className="text-black text-2xl md:text-5xl lg:text-6xl leading-none text-center w-full tracking-[0.08em] font-black"
-              style={{ fontFamily: "Naluka, sans-serif" }}
-            >ABOUT</h1>
+        <div className="relative w-[100px] sm:w-[220px] md:w-[270px] lg:w-[320px] drop-shadow-xl transition-transform duration-300 z-30 rotate-[-12deg] mr-[-8px] sm:mr-[-20px] md:mr-[-40px]">
+          <img src="/landing/stamp.png" alt="Stamp" className="relative z-0 w-full h-auto" />
+          <div className="absolute top-[16%] bottom-[16%] left-[10%] right-[10%] bg-[#D59115] z-10 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] rotate-[5deg]"></div>
+          <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none rotate-[-1.5deg]">
+            <h2 className="pt-2 text-[25px] sm:text-[36px] md:text-[42px] lg:text-[48px] text-black font-black leading-none tracking-[0.08em]" style={{ fontFamily: "Naluka, sans-serif" }}>ABOUT</h2>
           </div>
         </div>
 
-        {/* NITS Stamp */}
-        <div className="relative p-2 bg-white rotate-[8deg] md:mt-16 -mt-3 md:-ml-8 drop-shadow-xl transition-transform z-30" style={{ filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.5))" }}>
-          <div className="absolute -inset-[6px] bg-[#FFFFFF]" style={{ maskImage: "radial-gradient(circle at 6px 6px, transparent 6px, black 6.5px)", maskSize: "16px 16px", maskPosition: "-6px -6px", WebkitMaskImage: "radial-gradient(circle at 6px 6px, transparent 6px, black 6.5px)", WebkitMaskSize: "16px 16px", WebkitMaskPosition: "-6px -6px" }}></div>
-          <div className="relative w-full h-full bg-[#E4A01A] px-8 py-6 md:px-10 md:py-8 flex items-center justify-center pointer-events-none">
-            <h1
-              className="text-black text-2xl md:text-5xl lg:text-6xl leading-none text-center w-full tracking-[0.04em] font-black"
-              style={{ fontFamily: "Naluka, sans-serif" }}
-            >Oikyotaan</h1>
+        {/* OIKYOTAAN Stamp — overlaps the first */}
+        <div className="relative w-[100px] sm:w-[220px] md:w-[270px] lg:w-[320px] drop-shadow-xl transition-transform duration-300 z-20 rotate-[8deg] mt-8 md:mt-16">
+          <img src="/landing/stamp.png" alt="Stamp" className="relative z-0 w-full h-auto" />
+          <div className="absolute top-[16%] bottom-[16%] left-[10%] right-[10%] bg-[#D59115] z-10 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] rotate-[5deg]"></div>
+          <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none rotate-[-1.5deg]">
+            <h2 className="pt-2 text-[12px] sm:text-[26px] md:text-[32px] lg:text-[38px] text-black font-black leading-none tracking-[0.04em]" style={{ fontFamily: "Naluka, sans-serif" }}>OIKYOTAAN</h2>
           </div>
         </div>
 
       </div>
+
       {/* Main Content */}
       <div className="relative w-full max-w-[1200px] mt-12 sm:mt-16 md:mt-24 z-30 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
 

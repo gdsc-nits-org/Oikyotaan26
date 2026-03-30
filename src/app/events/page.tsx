@@ -20,6 +20,8 @@ export default function EventsPage() {
               description={event.description}
               image={event.image || "/events/girl.svg"}
               reverse={index % 2 !== 0}
+              smallText={event.smallText} 
+              tightTitle={event.tightTitle}
             />
           ))}
       </section>

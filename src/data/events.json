@@ -1,17 +1,39 @@
 [
   {
     "title": "Morning Rally",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "description": "The Morning Rally marks the grand awakening of Oikyotaan’26. As the sun rises, we join together in a vibrant procession, draped in our finest ethnic attire to honor our roots. With every step and every beat of the dhak, we celebrate the spirit of unity and heritage. Come, walk with us and let the celebration begin with heart and soul!",
     "image": "/events/girl.svg"
   },
   {
-    "title": "Evening Cultural",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "title": "Shokaler Adda",
+    "description": "​As the morning mist lifts, join us for the soul of Oikyotaan’26—the Shokaler Adda. This isn't just a gathering; it’s a revival of our most cherished tradition. Over steaming cups of tea and the gentle strumming of a guitar, we bridge generations through poetry, debate, and laughter. Come share a story or find a new one in this sanctuary of culture and timeless conversation.",
     "image": "/events/girl.svg"
   },
   {
-    "title": "Art Exhibition",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "title": "Student and Faculty performance ",
+    "description": "At Oikyotaan’26, the boundary between the classroom and the stage vanishes. Our Student & Faculty Performance is a rare glimpse into the artistic hearts of our academic community. From soulful vocal duets to vibrant folk dances, this showcase proves that brilliance isn't just found in textbooks—it’s alive in the rhythmic pulse of our shared heritage. Come witness the magic of mentorship meeting creativity in every note.",
+    "image": "/events/girl.svg",
+    "smallText": true
+  },
+  {
+    "title": "Donation Drive",
+    "description": "True celebration lies in the spirit of giving. As part of Oikyotaan’26, our Donation Drive invites you to extend the warmth of our heritage to those in need. Whether it’s books, clothes, or essential supplies, every contribution becomes a bridge of hope. Join us in transforming this festive season into a legacy of kindness, ensuring that the joy of our traditions reaches every heart in our community.",
     "image": "/events/girl.svg"
+  },
+  {
+    "title": "Street Painting",
+    "description": "​At Oikyotaan’26, the ground beneath our feet becomes a living masterpiece. The Street Painting event invites you to trade your brushes for the open pavement, transforming the campus into a sprawling gallery of tradition and creativity. From intricate alpana patterns to bold depictions of our seasonal festivals, watch as our shared stories come to life in vibrant hues, one stroke at a time.",
+    "image": "/events/girl.svg"
+  },{
+    "title": "Magazine Inauguration",
+    "description": "At Oikyotaan’26, we celebrate the power of the written word with our official Magazine Inauguration. This publication is more than just paper; it is a vibrant archive of our collective voice, featuring student insights, faculty reflections, and the artistic essence of our heritage. Join us as we flip the first page of this year’s journey, honoring the stories that bind us and the creativity that defines our community.",
+    "image": "/events/girl.svg",
+    "tightTitle": true
+  },
+  {
+    "title": "Ramp walk",
+    "description": "To the rhythmic pulse of tradition and the soft rustle of silk, we invite you to the Ramp Walk.This is not your typical runway; it is a rhythmic journey through the soul of our traditions. The Ramp Walk at Oikyotaan’26 transforms the stage into a living canvas, where every drape of a saree and every fold of a dhoti narrates a story of our heritage. Watch as elegance meets energy, proving that our roots are the most timeless fashion statement of all.",
+    "image": "/events/girl.svg",
+    "smallText": true
   }
 ]

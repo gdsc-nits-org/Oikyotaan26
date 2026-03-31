@@ -1,19 +1,19 @@
 [
   {
-    "name": "abc",
-    "role": "UI UX Designer",
-    "image": "/team/member1.png",
-    "instagram": "https://instagram.com/siddharth",
-    "linkedin": "https://linkedin.com/in/siddharth",
-    "github":"https://github.com/in/siddharth"
+    "name": "Tonmoy Bhattacharjee",
+    "role": "Coordinator",
+    "image": "https://res.cloudinary.com/dsaaxuphe/image/upload/v1774929965/IMG_6980_1_-_Tonmoy_Bhattacharjee_gn28n2.jpg",
+    "instagram": "https://www.instagram.com/tonmoy_bhattacharjee",
+    "linkedin": "www.linkedin.com/in/tonmoy-bhattacharjee",
+    "github":"error"
   },
   {
-    "name": "Rahul Das",
-    "role": "Frontend Developer",
-    "image": "/team/member1.png",
-    "instagram": "https://instagram.com/siddharth",
-    "linkedin": "https://linkedin.com/in/siddharth",
-    "github":"https://github.com/in/siddharth"
+    "name": "Shreyasmita Bhattacharya",
+    "role": "Coordinator",
+    "image": "https://res.cloudinary.com/dsaaxuphe/image/upload/v1774930183/20260327_204000_2_2_-_SHREYASMITA_BHATTACHARYA_xinw58.jpg",
+    "instagram": "https://www.instagram.com/__shreyasmita__?igsh=YmVyNjBkY2cyeHcz",
+    "linkedin": "https://www.linkedin.com/in/shreyasmita-bhattacharya-675955257",
+    "github":"error"
   },
   {
     "name": "Priya Sharma",

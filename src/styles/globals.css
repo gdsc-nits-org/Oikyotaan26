@@ -2,45 +2,37 @@
 
 @font-face {
   font-family: "Naluka";
-  src: url("/fonts/naluka.regular.ttf") format("truetype");
+  src: url("/fonts/Naluka.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-<<<<<<< HEAD
-@font-face {
-  font-family: 'Naluka';
-  src: url('/fonts/Naluka.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 body {
-  font-family: 'Naluka', sans-serif;
-=======
-/* Hide scrollbar for Chrome, Safari and Opera */
+  font-family: "Naluka", sans-serif;
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar hide */
 .custom-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .custom-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-/* ===== REMOVE PAGE SCROLLBAR ===== */
-
-html {
-  scrollbar-width: none; /* Firefox */
-}
-
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Edge, Safari */
-}
-
-body {
-  -ms-overflow-style: none; /* IE/Edge */
->>>>>>> 01cd81de0aa7eb40f60120caeb832d7fffe99ebc
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

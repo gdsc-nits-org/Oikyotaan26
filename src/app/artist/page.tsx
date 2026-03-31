@@ -1,296 +1,311 @@
 "use client";
 
+import Link from "next/link";
+
+// ─── REUSABLE ARTIST CARD COMPONENT ───
+const ArtistCard = ({ name }: { name: string }) => (
+  <div className="artist-card">
+    <div className="frame-wrap">
+      {/* Decorative Lotus on Left */}
+      <div className="lotus-decor-left">
+        <img src="/images/lotus-decor.png" alt="" aria-hidden="true" />
+      </div>
+
+      {/* Main Frame with Photo Area */}
+      <div className="frame-container">
+        <div className="frame-inner-bg">
+          <p className="photo-placeholder">Artist Photo</p>
+        </div>
+        <img 
+          src="/images/Group 1000006211.png" 
+          className="frame-border-img" 
+          alt="Ornate Border" 
+        />
+      </div>
+
+      {/* Decorative Lotus on Right */}
+      <div className="lotus-decor-right">
+        <img src="/images/lotus.png" alt="" aria-hidden="true" />
+      </div>
+    </div>
+
+    {/* Solid Brutalist Nameplate */}
+    <div className="nameplate-solid">
+      <span className="dot"></span>
+      <p>{name}</p>
+      <span className="dot"></span>
+    </div>
+  </div>
+);
+
+// ─── MAIN PAGE COMPONENT ───
 export default function ArtistPage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Bebas+Neue&display=swap');
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Bebas+Neue&family=Baloo+Da+2:wght@800&display=swap');
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .page {
+        .page-container {
           position: relative;
           width: 100%;
-          height: 100vh;
-          background-color: #8B2D2B;
-          overflow: hidden;
+          min-height: 100vh;
+          background-color: #8B2D2B; /* Deep Maroon */
+          overflow-x: hidden;
+          padding-bottom: 150px; /* Extra padding at the bottom */
         }
 
         /* ─── STAMPS ─── */
         .stamp {
           position: absolute;
-          filter: drop-shadow(3px 5px 10px rgba(0,0,0,0.55));
-          line-height: 0;
+          z-index: 2;
+          filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
+          width: 25vw;
+          max-width: 180px;
         }
-        .stamp img { display: block; border-radius: 3px; object-fit: cover; width: 13vw; height: 13vw; }
-        .s-magh    { top: 3vh;  left: 3vw;  transform: rotate(-11deg); z-index: 3; }
-        .s-ashaadh { top: 16vh; left: 1vw;  transform: rotate(-8deg);  z-index: 3; }
-        .s-shravan { top: 2vh;  right: 3vw; transform: rotate(10deg);  z-index: 3; }
-        .s-ashwin  { top: 14vh; right: 1vw; transform: rotate(8deg);   z-index: 3; }
+        .stamp img { width: 100%; height: auto; border-radius: 4px; }
+        
+        .s-magh     { top: 5vh;  left: 3vw;  transform: rotate(-12deg); }
+        .s-ashaadh  { top: 22vh; left: 2vw;  transform: rotate(-8deg); }
+        .s-shravan  { top: 4vh;  right: 3vw; transform: rotate(11deg); }
+        .s-ashwin   { top: 20vh; right: 2vw; transform: rotate(7deg); }
 
-        /* ─── GIRL ───
-           Anchored left of center so title can sit to her right.
-           Girl occupies roughly left:32% to left:44% of viewport.
-        */
-        .girl {
-          position: absolute;
-          top: 0;
-          left: 32%;
-          z-index: 6;
-          filter: drop-shadow(2px 6px 14px rgba(0,0,0,0.38));
-          line-height: 0;
+        /* ─── HEADER (Girl + Title) ─── */
+        .header-section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          padding-top: 50px;
+          position: relative;
+          z-index: 10;
         }
-        .girl img { display: block; width: 13vw; height: 42vh; object-fit: contain; }
 
-        /* ─── TITLE ───
-           Starts at left:46% — right of the girl, no overlap.
-        */
-        .title-wrap {
-          position: absolute;
-          top: 6vh;
-          left: 46%;
-          z-index: 7;
+        .girl-illustration {
+          width: 130px;
+          filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
         }
-        .title-event {
+
+        .title-group { display: flex; flex-direction: column; }
+
+        .event-label {
           font-family: 'Rye', serif;
-          color: #fff;
-          font-size: 1.2vw;
-          letter-spacing: 0.05em;
-          text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
-          display: block;
-          margin-bottom: 2px;
-          white-space: nowrap;
-        }
-        .title-artist {
-          font-family: 'Bebas Neue', sans-serif;
-          color: #fff;
-          font-size: 6vw;
-          line-height: 0.9;
-          letter-spacing: 0.05em;
-          text-shadow: 3px 4px 12px rgba(0,0,0,0.65);
-          display: block;
-          white-space: nowrap;
+          color: white;
+          font-size: 1.2rem;
+          letter-spacing: 0.1em;
         }
 
-        /* ─── FOOD ICON ───
-           Right after ARTIST text ends.
-           Title starts at 46%, ARTIST is ~6vw wide → ends at ~46+6*5=76% ... 
-           Use flexbox row on a wrapper so icon always follows text naturally.
-        */
-        .title-and-icon {
-          position: absolute;
-          top: 6vh;
-          left: 46%;
-          z-index: 7;
+        .main-title-row { display: flex; align-items: center; gap: 10px; }
+
+        .artist-text {
+          font-family: 'Bebas Neue', sans-serif;
+          color: white;
+          font-size: clamp(3.5rem, 8vw, 6rem);
+          line-height: 0.85;
+          text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Enlarged Food Icon */
+        .food-plate {
+          width: 150px;
+          height: auto;
+          object-fit: contain;
+          filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
+        }
+
+        /* ─── ARTISTS GRID ─── */
+        .artists-grid {
+          display: flex;
+          justify-content: center;
+          gap: 6vw;
+          margin-top: 80px; /* Increased to prevent colliding with header */
+          flex-wrap: wrap;
+          padding: 0 10px;
+          position: relative;
+          z-index: 5;
+        }
+
+        .artist-card {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
-        }
-        .artist-row {
-          display: flex;
           align-items: center;
-          gap: 0.8vw;
+          margin-bottom: 70px; /* Increased space between stacked cards */
+          width: 100%;
+          max-width: 400px;
         }
 
-        /* ─── LOTUS DECOR ───
-           Left side, vertically aligned with the frame (frame top ~40vh).
-           Horizontally: between left stamps and frame left edge.
-           Frame left edge is at ~33% (girl at 32%, frame slightly right of girl).
-        */
-        .lotus-decor {
-          position: absolute;
-          top: 38vh;
-          left: 22%;
-          z-index: 4;
-          line-height: 0;
-          filter: drop-shadow(1px 3px 6px rgba(0,0,0,0.2));
-        }
-        .lotus-decor img { display: block; width: 11vw; height: 36vh; object-fit: contain; }
-
-        /* ─── LOTUS BLOOMS — right of frame bottom ─── */
-        .lotus-b1 {
-          position: absolute;
-          top: 68vh; left: 57%;
-          z-index: 4; line-height: 0;
-          filter: drop-shadow(1px 3px 5px rgba(0,0,0,0.3));
-          transform: rotate(10deg);
-        }
-        .lotus-b1 img { display: block; width: 3.5vw; height: 3.5vw; object-fit: contain; }
-
-        .lotus-b2 {
-          position: absolute;
-          top: 73vh; left: 59%;
-          z-index: 4; line-height: 0;
-          filter: drop-shadow(1px 3px 5px rgba(0,0,0,0.3));
-          transform: rotate(-12deg) scale(0.85);
-        }
-        .lotus-b2 img { display: block; width: 3.5vw; height: 3.5vw; object-fit: contain; }
-
-        /* ─── FRAME ─── */
         .frame-wrap {
-          position: absolute;
-          top: 40vh;
-          left: 35%;
-          z-index: 5;
-          width: 20vw;
-          height: 40vh;
+          position: relative;
+          width: 100%;
+          aspect-ratio: 3.2 / 4.2;
         }
-        .frame-photo {
+
+        .frame-container { position: relative; width: 100%; height: 100%; z-index: 5; }
+
+        .frame-inner-bg {
           position: absolute;
-          inset: 1.5vw;
-          z-index: 1;
-          background: #1e0c08;
+          inset: 9%; 
+          background-color: #2a1614;
           display: flex;
           align-items: center;
           justify-content: center;
-          overflow: hidden;
         }
-        .frame-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .frame-photo-hint {
-          color: rgba(200,169,110,0.15);
-          font-size: 0.6rem;
+
+        .photo-placeholder {
+          color: #D4C3A3;
+          font-family: 'Baloo Da 2', serif;
+          opacity: 0.2;
           font-style: italic;
-          text-align: center;
-          padding: 8px;
-          letter-spacing: 0.05em;
         }
-        .frame-border {
+
+        .frame-border-img {
           position: absolute;
           inset: 0;
-          width: 100%; height: 100%;
+          width: 100%;
+          height: 100%;
           object-fit: fill;
-          z-index: 2;
           pointer-events: none;
-          display: block;
         }
 
-        /* ─── NAMEPLATE ─── */
-        .nameplate {
+        /* ─── LOTUS DECORATIONS ─── */
+        .lotus-decor-left { 
+          position: absolute; 
+          left: -12%; 
+          bottom: 2%; 
+          width: 35%; 
+          z-index: 6; 
+          filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+        }
+        .lotus-decor-right { 
+          position: absolute; 
+          right: -10%; 
+          bottom: 12%; 
+          width: 25%; 
+          z-index: 6; 
+          filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+        }
+        .lotus-decor-left img, .lotus-decor-right img { width: 100%; height: auto; }
+
+        /* ─── SOLID NAMEPLATE ─── */
+        .nameplate-solid {
+          margin-top: 50px; /* FIX: Increased heavily to stop overlapping the floral border */
+          width: 85%; 
+          background-color: #EFE6D5; 
+          border: 3px solid #1a1a1a;
+          padding: 12px 20px;
+          box-shadow: 8px 8px 0px #1a1a1a; 
+          z-index: 7;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .nameplate-solid p {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 2.5rem;
+          color: #1a1a1a;
+          letter-spacing: 0.1em;
+          margin-top: 4px; 
+        }
+
+        .dot { 
+          width: 8px; 
+          height: 8px; 
+          background-color: #1a1a1a; 
+          border-radius: 50%; 
+        }
+
+        /* ─── INSTRUMENTS ─── */
+        .instruments-decor {
           position: absolute;
-          top: 81vh;
-          left: 35%;
-          width: 20vw;
-          background: #f5ede0;
-          padding: 1.2vh 0;
-          text-align: center;
-          box-shadow: 0 3px 14px rgba(0,0,0,0.35);
-          z-index: 5;
+          bottom: 90px;
+          left: 55px;
+          width: 120px;
+          z-index: 10;
+          pointer-events: none;
+          filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.4));
         }
-        .nameplate p {
-          font-family: 'Rye', serif;
-          color: #8B2D2B;
-          font-size: 0.85vw;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-        }
+        .instruments-decor img { width: 100%; height: auto; }
 
-        /* ─── TABLET ─── */
-        @media (max-width: 768px) {
-          .stamp img           { width: 19vw; height: 19vw; }
-          .girl img            { width: 18vw; height: 40vh; }
-          .girl                { left: 28%; }
-          .title-and-icon      { left: 48%; top: 5vh; }
-          .title-event         { font-size: 2vw; }
-          .title-artist        { font-size: 8vw; }
-          .food-icon-img       { width: 12vw !important; height: 12vw !important; }
-          .frame-wrap          { width: 32vw; height: 40vh; left: 33%; }
-          .frame-photo         { inset: 2.4vw; }
-          .nameplate           { width: 32vw; left: 33%; }
-          .nameplate p         { font-size: 1.6vw; }
-          .lotus-decor         { left: 16%; top: 37vh; }
-          .lotus-decor img     { width: 15vw; height: 34vh; }
-          .lotus-b1            { left: 66%; top: 67vh; }
-          .lotus-b2            { left: 69%; top: 72vh; }
-          .lotus-b1 img, .lotus-b2 img { width: 6vw; height: 6vw; }
-        }
+        /* ─── MOBILE SPECIFIC ADJUSTMENTS ─── */
+        @media (max-width: 800px) {
+          .artists-grid {
+            flex-direction: column;
+            align-items: center;
+            gap: 90px; /* FIX: Massive gap between stacked cards to prevent overlapping */
+            margin-top: 60px; /* Keeps distance from the header */
+          }
 
-        /* ─── MOBILE ─── */
-        @media (max-width: 480px) {
-          .stamp img           { width: 22vw; height: 22vw; }
-          .girl                { left: 24%; }
-          .girl img            { width: 22vw; height: 38vh; }
-          .title-and-icon      { left: 48%; top: 4vh; }
-          .title-event         { font-size: 3vw; }
-          .title-artist        { font-size: 11vw; }
-          .food-icon-img       { width: 16vw !important; height: 16vw !important; }
-          .frame-wrap          { width: 46vw; left: 27%; top: 38vh; }
-          .frame-photo         { inset: 3.5vw; }
-          .nameplate           { width: 46vw; left: 27%; }
-          .nameplate p         { font-size: 2.5vw; }
-          .lotus-decor         { left: 5%; top: 36vh; }
-          .lotus-decor img     { width: 19vw; height: 32vh; }
-          .lotus-b1            { left: 74%; }
-          .lotus-b2            { left: 78%; }
-          .lotus-b1 img, .lotus-b2 img { width: 8vw; height: 8vw; }
+          .artist-card { max-width: 90vw; }
+
+          .girl-illustration { width: 85px; }
+          .artist-text { font-size: 3.5rem; }
+
+          /* Enlarged Oikyotaan text */
+          .event-label { 
+            font-size: 28px; 
+            letter-spacing: 0.1em; 
+          }
+          
+          /* Enlarged Food Icon */
+          .food-plate { 
+            width: 100px; 
+            margin-left: 10px; 
+          }
+
+          /* Stamps pushed to the edges */
+          .stamp { width: 65px; }
+          .s-magh { top: 3vh; left: 1vw; }
+          .s-shravan { top: 3vh; right: 1vw; }
+          .s-ashaadh { top: 18vh; left: 1vw; }
+          .s-ashwin { top: 16vh; right: 1vw; }
+
+          /* Fix nameplate margin for mobile */
+          .nameplate-solid { 
+            margin-top: 55px; /* Ensures it totally clears the bottom flowers */
+            padding: 8px 15px; 
+          }
+          .nameplate-solid p { font-size: 2rem; }
+          
+          .instruments-decor { width: 90px; bottom: 70px; left: 15px; }
         }
       `}</style>
 
-      <main className="page">
-
+      <main className="page-container">
         {/* STAMPS */}
-        <div className="stamp s-magh">
-          <img src="/images/no.png" alt="Magh stamp" />
-        </div>
-        <div className="stamp s-ashaadh">
-          <img src="/images/image 25.png" alt="Ashaadh stamp" />
-        </div>
-        <div className="stamp s-shravan">
-          <img src="/images/image 23.png" alt="Shravan stamp" />
-        </div>
-        <div className="stamp s-ashwin">
-          <img src="/images/image 17.png" alt="Ashwin stamp" />
-        </div>
+        <div className="stamp s-magh"><img src="/images/no.png" alt="" /></div>
+        <div className="stamp s-ashaadh"><img src="/images/image 25.png" alt="" /></div>
+        <div className="stamp s-shravan"><img src="/images/image 23.png" alt="" /></div>
+        <div className="stamp s-ashwin"><img src="/images/image 17.png" alt="" /></div>
 
-        {/* GIRL */}
-        <div className="girl">
-          <img src="/images/girl-combing.png" alt="Woman in saree" />
-        </div>
-
-        {/* TITLE + FOOD ICON in a flex column, icon inline with ARTIST */}
-        <div className="title-and-icon">
-          <span className="title-event">Oikyotaan 26&apos;</span>
-          <div className="artist-row">
-            <span className="title-artist">ARTIST</span>
-            <img
-              className="food-icon-img"
-              src="/images/food-icon.png"
-              alt="Puja icon"
-              style={{
-                width: "7vw",
-                height: "7vw",
-                objectFit: "contain",
-                filter: "drop-shadow(2px 4px 8px rgba(0,0,0,0.5))",
-                flexShrink: 0,
-              }}
-            />
+        {/* HEADER AREA */}
+        <section className="header-section">
+          <img src="/images/girl-combing.png" className="girl-illustration" alt="" />
+          <div className="title-group">
+            <span className="event-label">Oikyotaan 26&apos;</span>
+            <div className="main-title-row">
+              <h1 className="artist-text">ARTIST</h1>
+              <img src="/images/food-icon.png" className="food-plate" alt="" />
+            </div>
           </div>
+        </section>
+
+        {/* ARTISTS GRID */}
+        <section className="artists-grid">
+          <ArtistCard name="Artist Name" />
+          <ArtistCard name="Artist Name" />
+        </section>
+
+        {/* INSTRUMENTS (BOTTOM LEFT) */}
+        <div className="instruments-decor">
+          <img src="/images/instruments.png" alt="Traditional Instruments" />
         </div>
 
-        {/* LOTUS DECOR */}
-        <div className="lotus-decor">
-          <img src="/images/lotus-decor.png" alt="Lotus stem" />
+        {/* BOTTOM PATTERN (REPEATING BORDER) */}
+        <div className="absolute bottom-0 w-full h-4 opacity-40" 
+             style={{ backgroundImage: "url('/images/top-pattern.png')", backgroundRepeat: 'repeat-x' }}>
         </div>
-
-        {/* LOTUS BLOOMS */}
-        <div className="lotus-b1">
-          <img src="/images/lotus.png" alt="Lotus" />
-        </div>
-        <div className="lotus-b2">
-          <img src="/images/lotus.png" alt="Lotus" />
-        </div>
-
-        {/* FRAME */}
-        <div className="frame-wrap">
-          <div className="frame-photo">
-            <p className="frame-photo-hint">Artist Photo</p>
-          </div>
-          <img className="frame-border" src="/images/Group 1000006211.png" alt="" aria-hidden="true" />
-        </div>
-
-        {/* NAMEPLATE */}
-        <div className="nameplate">
-          <p>Artist Name</p>
-        </div>
-
       </main>
     </>
   );

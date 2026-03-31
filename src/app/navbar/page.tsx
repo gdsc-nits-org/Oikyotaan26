@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "ARTIST",  href: "/artist" },
   { label: "EVENTS",  href: "/events" },
   { label: "GALLERY", href: "/gallery" },
-  { label: "TEAM",    href: "/team", accent: true },
+  { label: "TEAM",    href: "/team" },
 ];
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
 
         .navbar {
           width: 100%;
-          background-color: #F5C842;
+          background-color: #E3BF79;
           position: sticky;
           top: 0;
           z-index: 100;
@@ -47,11 +47,10 @@ export default function Navbar() {
           height: 58px;
           width: auto;
           display: block;
-          /* Vector.png has black bg — multiply blends it out on yellow */
           mix-blend-mode: multiply;
         }
 
-        /* ── Nav links ── */
+        /* ── Nav links (Desktop) ── */
         .navbar-links {
           display: flex;
           align-items: center;
@@ -73,6 +72,8 @@ export default function Navbar() {
         }
         .navbar-links li a.accent { color: #8B2D2B; }
         .navbar-links li a:hover  { color: #8B2D2B; }
+        
+        /* Desktop Active Dot */
         .navbar-links li a.active::after {
           content: '';
           position: absolute;
@@ -117,7 +118,7 @@ export default function Navbar() {
 
         /* ── Mobile drawer ── */
         .mobile-drawer {
-          background: #F5C842;
+          background: #E3BF79;
           padding: 0 24px;
           max-height: 0;
           overflow: hidden;
@@ -137,8 +138,14 @@ export default function Navbar() {
           text-decoration: none;
           color: #1a1a1a;
           padding: 6px 0;
+          transition: color 0.2s;
         }
         .mobile-drawer a.accent { color: #8B2D2B; }
+        
+        /* Mobile Active Highlight */
+        .mobile-drawer a.active {
+          color: #8B2D2B;
+        }
 
         @media (max-width: 700px) {
           .navbar-links { display: none; }
@@ -204,14 +211,18 @@ export default function Navbar() {
         {/* MOBILE DRAWER */}
         <div className={`mobile-drawer${open ? " open" : ""}`}>
           {NAV_LINKS.map(({ label, href, accent }) => (
-            <a
+            <Link
               key={label}
               href={href}
-              className={accent ? "accent" : ""}
+              /* Applying the exact same active logic to the mobile drawer */
+              className={[
+                accent ? "accent" : "",
+                pathname === href ? "active" : ""
+              ].filter(Boolean).join(" ")}
               onClick={() => setOpen(false)}
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>

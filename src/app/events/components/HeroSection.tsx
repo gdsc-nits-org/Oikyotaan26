@@ -1,35 +1,67 @@
 export default function HeroSection() {
   return (
     <section className="relative w-full bg-[#8A3123] flex justify-center overflow-hidden">
-      <div className="relative w-full max-w-[1200px] pt-16 sm:pt-20 md:pt-38 pb-10 flex flex-col items-center">
+      <div className="relative w-full max-w-[1200px] px-6 sm:px-6 md:px-0 pt-16 sm:pt-20 md:pt-38 pb-10 flex flex-col items-center">
 
         {/* Left Decorations */}
         <img
           src="/events/left.svg"
           alt="decorations"
-          className="absolute left-[10px] md:left-[15px] top-10 md:top-16  w-[90px] sm:w-[110px] md:w-[320px]"
+          className="
+            absolute 
+            left-[4px] 
+            min-[380px]:left-[12px] 
+            sm:left-[10px] md:left-[15px] 
+            top-10 md:top-16  
+            w-[80px] 
+            min-[380px]:w-[95px] 
+            sm:w-[110px] md:w-[320px]
+
+            min-[770px]:hidden 
+            min-[1000px]:block
+          "
         />
 
         {/* Right Decorations */}
         <img
           src="/events/right.svg"
           alt="decorations"
-          className="absolute right-[10px] md:right-[15px] top-10 md:top-16  w-[90px] sm:w-[110px] md:w-[320px]"
+          className="
+            absolute 
+            right-[4px] 
+            min-[380px]:right-[12px] 
+            sm:right-[10px] md:right-[15px] 
+            top-10 md:top-16  
+            w-[80px] 
+            min-[380px]:w-[95px] 
+            sm:w-[110px] md:w-[320px]
+
+            min-[770px]:hidden 
+            min-[1000px]:block
+          "
         />
 
         {/* Hero Text + Bus */}
         <div className="flex flex-col items-center text-white">
 
           <h1
-            className="tracking-[0.04em] text-[26px] sm:text-[32px] md:text-[60px]
-"
+            className="tracking-[0.04em] text-[26px] sm:text-[32px] md:text-[60px]"
             style={{ fontFamily: "Naluka" }}
           >
             Oikyotaan'26
           </h1>
 
           <h2
-            className="tracking-[0.04em] text-[34px] sm:text-[48px] md:text-[100px] -mt-1 md:-mt-3 text-center"
+            className="
+              tracking-[0.19em] 
+              min-[380px]:tracking-[0.21em] 
+              sm:tracking-[0.04em] 
+              text-[34px] sm:text-[48px] md:text-[100px] 
+              -mt-1 md:-mt-3 text-center
+              translate-x-[4px] 
+              min-[380px]:translate-x-[2px] 
+              sm:translate-x-0
+            "
             style={{
               fontFamily: "Naluka",
               textShadow: "0px 4px 4px rgba(0,0,0,0.25)"

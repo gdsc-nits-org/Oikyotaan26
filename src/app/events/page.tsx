@@ -13,13 +13,15 @@ export default function EventsPage() {
       {/* 1. items-start pins the cards to the LEFT side xyz */}
       {/* 2. pl-[20px] lg:pl-[80px] sets the distance from the left edge */}
       <section className="w-full flex flex-col items-center gap-1 md:gap-2 py-16 md:py-24 px-4">
-          {events.map((event, index) => (
+          {events.map((event: any, index: number) => (
             <EventCard
-              key={event.id || index}
+              key={event.id || event.title || index}
               title={event.title}
               description={event.description}
               image={event.image || "/events/girl.svg"}
               reverse={index % 2 !== 0}
+              smallText={event.smallText} 
+              tightTitle={event.tightTitle}
             />
           ))}
       </section>

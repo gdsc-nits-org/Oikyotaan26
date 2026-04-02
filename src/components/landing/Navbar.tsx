@@ -15,7 +15,7 @@ export default function Navbar() {
       </div>
 
       {/* Navigation Items (Desktop) */}
-      <div className="hidden md:flex flex-row space-x-8 pr-10 text-lg lg:text-xl font-bold tracking-widest text-black" style={{ fontFamily: "'Naluka', cursive" }}>
+      <div className="hidden md:flex flex-row space-x-8 pr-10 text-2xl lg:text-3xl font-bold tracking-widest text-black" style={{ fontFamily: "'Gartawati', cursive" }}>
         <Link href="/" className="hover:text-amber-900 transition-colors">HOME</Link>
         <Link href="/artist" className="hover:text-amber-900 transition-colors">ARTIST</Link>
         <Link href="/events" className="hover:text-amber-900 transition-colors">EVENTS</Link>
@@ -37,13 +37,13 @@ export default function Navbar() {
         className={`absolute top-[60px] left-0 w-full bg-[#E6C27A] shadow-2xl flex flex-col items-center gap-6 py-8 border-t-2 border-black/10 transition-all duration-300 origin-top transform md:hidden z-[95] ${
           isOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"
         }`} 
-        style={{ fontFamily: "'Naluka', cursive" }}
+        style={{ fontFamily: "'Gartawati', cursive" }}
       >
-        <Link href="/" onClick={() => setIsOpen(false)} className="text-xl font-bold tracking-widest text-black hover:text-amber-900">HOME</Link>
-        <Link href="/artist" onClick={() => setIsOpen(false)} className="text-xl font-bold tracking-widest text-black hover:text-amber-900">ARTIST</Link>
-        <Link href="/events" onClick={() => setIsOpen(false)} className="text-xl font-bold tracking-widest text-black hover:text-amber-900">EVENTS</Link>
-        <Link href="/gallery" onClick={() => setIsOpen(false)} className="text-xl font-bold tracking-widest text-black hover:text-amber-900">GALLERY</Link>
-        <Link href="/team" onClick={() => setIsOpen(false)} className="text-2xl font-black tracking-widest text-[#A83232] drop-shadow-sm border-t border-black/10 pt-4 w-1/2 text-center">TEAM</Link>
+        <Link href="/" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">HOME</Link>
+        <Link href="/artist" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">ARTIST</Link>
+        <Link href="/events" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">EVENTS</Link>
+        <Link href="/gallery" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">GALLERY</Link>
+        <Link href="/team" onClick={() => setIsOpen(false)} className="text-4xl font-black tracking-widest text-[#A83232] drop-shadow-sm border-t border-black/10 pt-4 w-1/2 text-center">TEAM</Link>
       </div>
 
       {/* Decorative Wavy Border at Bottom */}

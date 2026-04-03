@@ -172,7 +172,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\HP\\team-page\\Oikyotaan26\\generated\\prisma",
+      "value": "C:\\Users\\subha\\OneDrive\\Desktop\\projects\\Oikyotaan26\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -186,7 +186,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\HP\\team-page\\Oikyotaan26\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\subha\\OneDrive\\Desktop\\projects\\Oikyotaan26\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

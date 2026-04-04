@@ -1,6 +1,7 @@
 // src/app/events/page.tsx
 import HeroSection from "./components/HeroSection";
 import EventCard from "./components/EventCard";
+import Footer from "./Footer";
 import eventsData from "../../data/events.json"; 
 
 type Event = {
@@ -34,6 +35,7 @@ export default function EventsPage() {
             />
           ))}
       </section>
+      <Footer />
     </main>
   );
 }

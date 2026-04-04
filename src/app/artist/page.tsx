@@ -1,6 +1,7 @@
 "use client";
 
 // import Image from "next/image";
+import Footer from "./Footer";
 
 // ─── REUSABLE ARTIST CARD COMPONENT ───
 const ArtistCard = ({ name }: { name: string }) => (
@@ -336,6 +337,7 @@ export default function ArtistPage() {
         <div className="absolute bottom-0 w-full h-4 opacity-40"
           style={{ backgroundImage: "url('/images/top-pattern.png')", backgroundRepeat: 'repeat-x' }}>
         </div>
+        <Footer />
       </main>
     </>
   );

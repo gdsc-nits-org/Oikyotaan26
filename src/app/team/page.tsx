@@ -1,6 +1,7 @@
 import team from "../../data/team.json";
 import uiux from "../../data/core.json";
 import TeamCard from "./components/TeamCard";
+import Footer from "./components/Footer";
 // import Image from "next/image";
 
 export default function Home() {
@@ -85,7 +86,7 @@ export default function Home() {
 
       </div>
 
-
+      <Footer />
     </main>
   );
 }

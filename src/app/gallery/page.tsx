@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
+import Footer from './Footer';
 
 // --- Reusable Image Frame Component ---
 const Frame = ({ src, alt, extraClasses = "" }: { src?: string; alt?: string, extraClasses?: string }) => {
@@ -201,6 +202,7 @@ export default function PhotoGallery() {
             </div>
           ))}
         </div>
+        <Footer />
       </main>
 
     </div>

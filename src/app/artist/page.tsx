@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 
 // ─── REUSABLE ARTIST CARD COMPONENT ───
 const ArtistCard = ({ name }: { name: string }) => (
@@ -8,7 +8,7 @@ const ArtistCard = ({ name }: { name: string }) => (
     <div className="frame-wrap">
       {/* Decorative Lotus on Left */}
       <div className="lotus-decor-left">
-        <Image
+        <img
           src="/images/lotus-decor.png"
           alt=""
           width={150}
@@ -22,17 +22,17 @@ const ArtistCard = ({ name }: { name: string }) => (
         <div className="frame-inner-bg">
           <p className="photo-placeholder">Artist Photo</p>
         </div>
-        <Image
+        <img
           src="/images/Group 1000006211.png"
           alt="Ornate Border"
-          fill
+          // fill
           className="frame-border-img"
         />
       </div>
 
       {/* Decorative Lotus on Right */}
       <div className="lotus-decor-right">
-        <Image
+        <img
           src="/images/lotus.png"
           alt=""
           width={120}
@@ -287,14 +287,14 @@ export default function ArtistPage() {
 
       <main className="page-container">
         {/* STAMPS */}
-        <div className="stamp s-magh"><Image src="/images/no.png" alt="" width={120} height={120} /></div>
-        <div className="stamp s-ashaadh"><Image src="/images/image 25.png" alt="" /></div>
-        <div className="stamp s-shravan"><Image src="/images/image 23.png" alt="" /></div>
-        <div className="stamp s-ashwin"><Image src="/images/image 17.png" alt="" /></div>
+        <div className="stamp s-magh"><img src="/images/no.png" alt="" width={120} height={120} /></div>
+        <div className="stamp s-ashaadh"><img src="/images/image 25.png" alt="" /></div>
+        <div className="stamp s-shravan"><img src="/images/image 23.png" alt="" /></div>
+        <div className="stamp s-ashwin"><img src="/images/image 17.png" alt="" /></div>
 
         {/* HEADER AREA */}
         <section className="header-section">
-          <Image
+          <img
             src="/images/girl-combing.png"
             alt="Girl illustration"
             width={130}
@@ -305,7 +305,7 @@ export default function ArtistPage() {
             <span className="event-label">Oikyotaan 26&apos;</span>
             <div className="main-title-row">
               <h1 className="artist-text">ARTIST</h1>
-              <Image
+              <img
                 src="/images/food-icon.png"
                 alt="Food icon"
                 width={150}
@@ -324,7 +324,7 @@ export default function ArtistPage() {
 
         {/* INSTRUMENTS (BOTTOM LEFT) */}
         <div className="instruments-decor">
-          <Image
+          <img
             src="/images/instruments.png"
             alt="Traditional Instruments"
             width={120}

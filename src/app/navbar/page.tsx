@@ -166,7 +166,7 @@ export default function Navbar() {
 
           {/* LOGO — Vector.png */}
           <Link href="/" className="navbar-logo">
-            <Image
+            <img
               src="/images/Vector.png"
               alt="Oikyotaan logo"
             />

@@ -3,13 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
-const NAV_LINKS = [
-  { label: "HOME",    href: "/" },
-  { label: "ARTIST",  href: "/artist" },
-  { label: "EVENTS",  href: "/events" },
+type NavLink = {
+  label: string;
+  href: string;
+  accent?: boolean;
+};
+
+const NAV_LINKS: NavLink[] = [
+  { label: "HOME", href: "/" },
+  { label: "ARTIST", href: "/artist" },
+  { label: "EVENTS", href: "/events" },
   { label: "GALLERY", href: "/gallery" },
-  { label: "TEAM",    href: "/team" },
+  { label: "TEAM", href: "/team" },
 ];
 
 export default function Navbar() {
@@ -159,7 +166,7 @@ export default function Navbar() {
 
           {/* LOGO — Vector.png */}
           <Link href="/" className="navbar-logo">
-            <img
+            <Image
               src="/images/Vector.png"
               alt="Oikyotaan logo"
             />

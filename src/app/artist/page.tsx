@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
 
 // ─── REUSABLE ARTIST CARD COMPONENT ───
 const ArtistCard = ({ name }: { name: string }) => (
@@ -8,7 +8,13 @@ const ArtistCard = ({ name }: { name: string }) => (
     <div className="frame-wrap">
       {/* Decorative Lotus on Left */}
       <div className="lotus-decor-left">
-        <img src="/images/lotus-decor.png" alt="" aria-hidden="true" />
+        <Image
+          src="/images/lotus-decor.png"
+          alt=""
+          width={150}
+          height={150}
+          aria-hidden
+        />
       </div>
 
       {/* Main Frame with Photo Area */}
@@ -16,16 +22,23 @@ const ArtistCard = ({ name }: { name: string }) => (
         <div className="frame-inner-bg">
           <p className="photo-placeholder">Artist Photo</p>
         </div>
-        <img 
-          src="/images/Group 1000006211.png" 
-          className="frame-border-img" 
-          alt="Ornate Border" 
+        <Image
+          src="/images/Group 1000006211.png"
+          alt="Ornate Border"
+          fill
+          className="frame-border-img"
         />
       </div>
 
       {/* Decorative Lotus on Right */}
       <div className="lotus-decor-right">
-        <img src="/images/lotus.png" alt="" aria-hidden="true" />
+        <Image
+          src="/images/lotus.png"
+          alt=""
+          width={120}
+          height={120}
+          aria-hidden
+        />
       </div>
     </div>
 
@@ -274,19 +287,31 @@ export default function ArtistPage() {
 
       <main className="page-container">
         {/* STAMPS */}
-        <div className="stamp s-magh"><img src="/images/no.png" alt="" /></div>
-        <div className="stamp s-ashaadh"><img src="/images/image 25.png" alt="" /></div>
-        <div className="stamp s-shravan"><img src="/images/image 23.png" alt="" /></div>
-        <div className="stamp s-ashwin"><img src="/images/image 17.png" alt="" /></div>
+        <div className="stamp s-magh"><Image src="/images/no.png" alt="" width={120} height={120} /></div>
+        <div className="stamp s-ashaadh"><Image src="/images/image 25.png" alt="" /></div>
+        <div className="stamp s-shravan"><Image src="/images/image 23.png" alt="" /></div>
+        <div className="stamp s-ashwin"><Image src="/images/image 17.png" alt="" /></div>
 
         {/* HEADER AREA */}
         <section className="header-section">
-          <img src="/images/girl-combing.png" className="girl-illustration" alt="" />
+          <Image
+            src="/images/girl-combing.png"
+            alt="Girl illustration"
+            width={130}
+            height={130}
+            className="girl-illustration"
+          />
           <div className="title-group">
             <span className="event-label">Oikyotaan 26&apos;</span>
             <div className="main-title-row">
               <h1 className="artist-text">ARTIST</h1>
-              <img src="/images/food-icon.png" className="food-plate" alt="" />
+              <Image
+                src="/images/food-icon.png"
+                alt="Food icon"
+                width={150}
+                height={150}
+                className="food-plate"
+              />
             </div>
           </div>
         </section>
@@ -299,12 +324,17 @@ export default function ArtistPage() {
 
         {/* INSTRUMENTS (BOTTOM LEFT) */}
         <div className="instruments-decor">
-          <img src="/images/instruments.png" alt="Traditional Instruments" />
+          <Image
+            src="/images/instruments.png"
+            alt="Traditional Instruments"
+            width={120}
+            height={120}
+          />
         </div>
 
         {/* BOTTOM PATTERN (REPEATING BORDER) */}
-        <div className="absolute bottom-0 w-full h-4 opacity-40" 
-             style={{ backgroundImage: "url('/images/top-pattern.png')", backgroundRepeat: 'repeat-x' }}>
+        <div className="absolute bottom-0 w-full h-4 opacity-40"
+          style={{ backgroundImage: "url('/images/top-pattern.png')", backgroundRepeat: 'repeat-x' }}>
         </div>
       </main>
     </>

@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
     <section className="relative w-full bg-[#8A3123] flex justify-center overflow-hidden">
       <div className="relative w-full max-w-[1200px] px-6 sm:px-6 md:px-0 pt-16 sm:pt-20 md:pt-38 pb-10 flex flex-col items-center">
 
         {/* Left Decorations */}
-        <img
+        <Image
           src="/events/left.svg"
           alt="decorations"
           className="
@@ -23,7 +25,7 @@ export default function HeroSection() {
         />
 
         {/* Right Decorations */}
-        <img
+        <Image
           src="/events/right.svg"
           alt="decorations"
           className="
@@ -48,7 +50,7 @@ export default function HeroSection() {
             className="tracking-[0.04em] text-[26px] sm:text-[32px] md:text-[60px]"
             style={{ fontFamily: "Naluka" }}
           >
-            Oikyotaan'26
+            {"Oikyotaan'26"}
           </h1>
 
           <h2
@@ -70,7 +72,7 @@ export default function HeroSection() {
             EVENTS
           </h2>
 
-          <img
+          <Image
             src="/events/bus.svg"
             alt="bus"
             className="w-[180px] sm:w-[220px] md:w-[460px] -mt-[52px] sm:-mt-[60px] md:-mt-[146px]"

@@ -3,8 +3,17 @@ import HeroSection from "./components/HeroSection";
 import EventCard from "./components/EventCard";
 import eventsData from "../../data/events.json"; 
 
+type Event = {
+  id?: string; 
+  title: string;
+  description: string;
+  image?: string;
+  smallText?: boolean;
+  tightTitle?: boolean;
+};
+
 export default function EventsPage() {
-  const events = Array.isArray(eventsData) ? eventsData : [];
+  const events: Event[] = Array.isArray(eventsData) ? eventsData : [];
 
   return (
     <main className="w-full min-h-screen bg-[#8A3123] overflow-x-hidden">
@@ -15,10 +24,10 @@ export default function EventsPage() {
       <section className="w-full flex flex-col items-center gap-1 md:gap-2 py-16 md:py-24 px-4">
           {events.map((event, index) => (
             <EventCard
-              key={event.id || index}
+              key={event.id ?? index}
               title={event.title}
               description={event.description}
-              image={event.image || "/events/girl.svg"}
+              image={event.image ?? "/events/girl.svg"}
               reverse={index % 2 !== 0}
               smallText={event.smallText} 
               tightTitle={event.tightTitle}

@@ -1,4 +1,15 @@
-export default function EventCard({ title, description, image, reverse = false, smallText = false, tightTitle = false }) {
+type EventCardProps = {
+  title: string;
+  description: string;
+  image: string;
+  reverse?: boolean;
+  smallText?: boolean;
+  tightTitle?: boolean;
+};
+
+import Image from "next/image";
+
+export default function EventCard({ title, description, image, reverse = false, smallText = false, tightTitle = false }: EventCardProps) {
   return (
     <div className="w-full flex justify-center -mb-20 min-[390px]:-mb-15 md:mb-0">
       
@@ -42,15 +53,16 @@ export default function EventCard({ title, description, image, reverse = false, 
               }`}
             >
 
-              <img
+              <Image
                 src="/events/small2.png"
                 className="absolute inset-0 w-full h-full object-contain z-50 pointer-events-none min-[540px]:hidden md:block"
+                alt=""
               />
 
               <div className="absolute inset-y-[2px] inset-x-[2px] md:inset-x-[13.5px] z-[60] pointer-events-none border-[3px] md:border-[4px] border-[#331818] min-[540px]:hidden md:block" />
 
               <div className="absolute inset-x-[6.5%] inset-y-[4%] md:inset-[6%] z-10 overflow-hidden">
-                <img
+                <Image
                   src={image}
                   alt={title}
                   className="w-full h-full object-cover scale-[1.08] md:scale-100 object-center"
@@ -127,7 +139,7 @@ export default function EventCard({ title, description, image, reverse = false, 
                 {/* MOBILE */}
                 <div className="flex md:hidden items-center justify-center w-full h-full min-[540px]:hidden">
                   <div className="relative inline-block">
-                    <img
+                    <Image
                       src="/events/big2.png"
                       alt="outer-frame"
                       className="block w-full h-auto"
@@ -138,7 +150,7 @@ export default function EventCard({ title, description, image, reverse = false, 
 
                 {/* DESKTOP */}
                 <div className="hidden md:block absolute inset-0">
-                  <img
+                  <Image
                     src="/events/big2.png"
                     alt="outer-frame"
                     className="w-full h-full object-contain"

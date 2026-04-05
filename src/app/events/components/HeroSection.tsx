@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
     <section className="relative w-full bg-[#8A3123] flex justify-center overflow-hidden">
@@ -48,7 +50,7 @@ export default function HeroSection() {
             className="tracking-[0.04em] text-[26px] sm:text-[32px] md:text-[60px]"
             style={{ fontFamily: "Naluka" }}
           >
-            Oikyotaan'26
+            {"Oikyotaan'26"}
           </h1>
 
           <h2

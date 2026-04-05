@@ -7,6 +7,8 @@ type EventCardProps = {
   tightTitle?: boolean;
 };
 
+// import Image from "next/image";
+
 export default function EventCard({ title, description, image, reverse = false, smallText = false, tightTitle = false }: EventCardProps) {
   return (
     <div className="w-full flex justify-center -mb-20 min-[390px]:-mb-15 md:mb-0">
@@ -54,6 +56,7 @@ export default function EventCard({ title, description, image, reverse = false, 
               <img
                 src="/events/small2.png"
                 className="absolute inset-0 w-full h-full object-contain z-50 pointer-events-none min-[540px]:hidden md:block"
+                alt=""
               />
 
               <div className="absolute inset-y-[2px] inset-x-[2px] md:inset-x-[13.5px] z-[60] pointer-events-none border-[3px] md:border-[4px] border-[#331818] min-[540px]:hidden md:block" />

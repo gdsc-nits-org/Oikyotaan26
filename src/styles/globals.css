@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 @font-face {
   font-family: "Naluka";
-  src: url("/fonts/Naluka.ttf") format("opentype");
+  src: url("/fonts/naluka.regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,31 +20,12 @@
   font-display: swap; 
 }
 
-@theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-body {
-  font-family: "Naluka", sans-serif;
-  -ms-overflow-style: none; /* IE/Edge */
-}
-
-/* Hide scrollbar for Chrome, Safari */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for Firefox */
-html {
-  scrollbar-width: none;
-}
-
-/* Custom scrollbar hide */
+/* Hide scrollbar for Chrome, Safari and Opera */
 .custom-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
+/* Hide scrollbar for IE, Edge and Firefox */
 .custom-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

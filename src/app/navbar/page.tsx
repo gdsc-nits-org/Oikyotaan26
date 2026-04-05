@@ -1,238 +1,62 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
-type NavLink = {
-  label: string;
-  href: string;
-  accent?: boolean;
-};
-
-const NAV_LINKS: NavLink[] = [
-  { label: "HOME", href: "/" },
-  { label: "ARTIST", href: "/artist" },
-  { label: "EVENTS", href: "/events" },
-  { label: "GALLERY", href: "/gallery" },
-  { label: "TEAM", href: "/team" },
-];
-
 export default function Navbar() {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@800&display=swap');
+    <nav className="w-full h-[60px] md:h-[80px] bg-[#E6C27A] flex items-center justify-between px-6 md:px-12 relative z-[100] border-b-2 border-black/10">
+      {/* Left Logo (Owl with Pen) */}
+      <div className="relative h-10 w-24 md:h-14 md:w-32 flex items-center pl-2">
+        <Image src="/landing/logo.png" alt="Oikyotaan Logo" fill className="object-contain object-left" priority />
+      </div>
 
-        .navbar {
-          width: 100%;
-          background-color: #E3BF79;
-          position: sticky;
-          top: 0;
-          z-index: 100;
-        }
+      {/* Navigation Items (Desktop) */}
+      <div className="hidden md:flex flex-row space-x-8 pr-10 text-2xl lg:text-3xl font-bold tracking-widest text-black" style={{ fontFamily: "'Gartawati', cursive" }}>
+        <Link href="/" className="hover:text-amber-900 transition-colors">HOME</Link>
+        <Link href="/artist" className="hover:text-amber-900 transition-colors">ARTIST</Link>
+        <Link href="/events" className="hover:text-amber-900 transition-colors">EVENTS</Link>
+        <Link href="/gallery" className="hover:text-amber-900 transition-colors">GALLERY</Link>
+        <Link href="/team" className="text-[#A83232] drop-shadow-sm">TEAM</Link>
+      </div>
 
-        .navbar-inner {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 8px 32px 4px;
-        }
-
-        /* ── Logo — Vector.png ── */
-        .navbar-logo {
-          display: block;
-          text-decoration: none;
-          line-height: 0;
-          flex-shrink: 0;
-        }
-        .navbar-logo img {
-          height: 58px;
-          width: auto;
-          display: block;
-          mix-blend-mode: multiply;
-        }
-
-        /* ── Nav links (Desktop) ── */
-        .navbar-links {
-          display: flex;
-          align-items: center;
-          gap: 44px;
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-        .navbar-links li a {
-          font-family: 'Baloo Da 2', sans-serif;
-          font-weight: 800;
-          font-size: 1.15rem;
-          letter-spacing: 0.04em;
-          text-decoration: none;
-          color: #1a1a1a;
-          position: relative;
-          transition: color 0.2s;
-          white-space: nowrap;
-        }
-        .navbar-links li a.accent { color: #8B2D2B; }
-        .navbar-links li a:hover  { color: #8B2D2B; }
-        
-        /* Desktop Active Dot */
-        .navbar-links li a.active::after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #8B2D2B;
-        }
-
-        /* ── Wavy dotted border ── */
-        .navbar-wave {
-          width: 100%;
-          overflow: hidden;
-          line-height: 0;
-        }
-        .navbar-wave svg {
-          display: block;
-          width: 100%;
-          height: 14px;
-        }
-
-        /* ── Hamburger ── */
-        .hamburger {
-          display: none;
-          flex-direction: column;
-          gap: 5px;
-          cursor: pointer;
-          background: none;
-          border: none;
-          padding: 4px;
-        }
-        .hamburger span {
-          display: block;
-          width: 26px;
-          height: 3px;
-          background: #1a1a1a;
-          border-radius: 2px;
-        }
-
-        /* ── Mobile drawer ── */
-        .mobile-drawer {
-          background: #E3BF79;
-          padding: 0 24px;
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        .mobile-drawer.open {
-          max-height: 300px;
-          padding: 12px 24px 20px;
-          border-top: 2px dashed rgba(0,0,0,0.15);
-        }
-        .mobile-drawer a {
-          display: block;
-          font-family: 'Baloo Da 2', sans-serif;
-          font-weight: 800;
-          font-size: 1.2rem;
-          letter-spacing: 0.04em;
-          text-decoration: none;
-          color: #1a1a1a;
-          padding: 6px 0;
-          transition: color 0.2s;
-        }
-        .mobile-drawer a.accent { color: #8B2D2B; }
-        
-        /* Mobile Active Highlight */
-        .mobile-drawer a.active {
-          color: #8B2D2B;
-        }
-
-        @media (max-width: 700px) {
-          .navbar-links { display: none; }
-          .hamburger    { display: flex; }
-          .navbar-inner { padding: 8px 20px 4px; }
-        }
-      `}</style>
-
-      <nav className="navbar">
-        <div className="navbar-inner">
-
-          {/* LOGO — Vector.png */}
-          <Link href="/" className="navbar-logo">
-            <img
-              src="/images/Vector.png"
-              alt="Oikyotaan logo"
-            />
-          </Link>
-
-          {/* DESKTOP LINKS */}
-          <ul className="navbar-links">
-            {NAV_LINKS.map(({ label, href, accent }) => (
-              <li key={label}>
-                <Link
-                  href={href}
-                  className={[
-                    accent ? "accent" : "",
-                    pathname === href ? "active" : "",
-                  ].filter(Boolean).join(" ")}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          {/* HAMBURGER */}
-          <button
-            className="hamburger"
-            aria-label="Toggle menu"
-            onClick={() => setOpen((o) => !o)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-        </div>
-
-        {/* WAVY DOTTED BOTTOM BORDER */}
-        <div className="navbar-wave">
-          <svg viewBox="0 0 1440 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M0,7 C30,0 60,14 90,7 C120,0 150,14 180,7 C210,0 240,14 270,7 C300,0 330,14 360,7 C390,0 420,14 450,7 C480,0 510,14 540,7 C570,0 600,14 630,7 C660,0 690,14 720,7 C750,0 780,14 810,7 C840,0 870,14 900,7 C930,0 960,14 990,7 C1020,0 1050,14 1080,7 C1110,0 1140,14 1170,7 C1200,0 1230,14 1260,7 C1290,0 1320,14 1350,7 C1380,0 1410,14 1440,7"
-              fill="none"
-              stroke="#1a1a1a"
-              strokeWidth="2.5"
-              strokeDasharray="3 6"
-              strokeLinecap="round"
-            />
+      {/* Hamburger Icon (Mobile) */}
+      <div className="md:hidden flex items-center z-[110]">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-black focus:outline-none p-1 transition-transform active:scale-95">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
-        </div>
+        </button>
+      </div>
 
-        {/* MOBILE DRAWER */}
-        <div className={`mobile-drawer${open ? " open" : ""}`}>
-          {NAV_LINKS.map(({ label, href, accent }) => (
-            <Link
-              key={label}
-              href={href}
-              /* Applying the exact same active logic to the mobile drawer */
-              className={[
-                accent ? "accent" : "",
-                pathname === href ? "active" : ""
-              ].filter(Boolean).join(" ")}
-              onClick={() => setOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
-      </nav>
-    </>
+      {/* Mobile Dropdown Menu */}
+      <div 
+        className={`absolute top-[60px] left-0 w-full bg-[#E6C27A] shadow-2xl flex flex-col items-center gap-6 py-8 border-t-2 border-black/10 transition-all duration-300 origin-top transform md:hidden z-[95] ${
+          isOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"
+        }`} 
+        style={{ fontFamily: "'Gartawati', cursive" }}
+      >
+        <Link href="/" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">HOME</Link>
+        <Link href="/artist" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">ARTIST</Link>
+        <Link href="/events" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">EVENTS</Link>
+        <Link href="/gallery" onClick={() => setIsOpen(false)} className="text-3xl font-bold tracking-widest text-black hover:text-amber-900">GALLERY</Link>
+        <Link href="/team" onClick={() => setIsOpen(false)} className="text-4xl font-black tracking-widest text-[#A83232] drop-shadow-sm border-t border-black/10 pt-4 w-1/2 text-center">TEAM</Link>
+      </div>
+
+      {/* Decorative Wavy Border at Bottom */}
+      <div className="absolute left-0 bottom-[10px] translate-y-full w-full z-[90]">
+        <Image 
+          src="/landing/navbar.png" 
+          alt="Navbar Ribbon" 
+          width={1920} 
+          height={80} 
+          className="w-full h-auto object-cover" 
+          priority 
+        />
+      </div>
+    </nav>
   );
 }

@@ -57,8 +57,6 @@ export default function ArtistPage() {
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Rye&family=Bebas+Neue&family=Baloo+Da+2:wght@800&display=swap');
-        
-        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         .page-container {
           position: relative;
@@ -66,16 +64,17 @@ export default function ArtistPage() {
           min-height: 100vh;
           background-color: #8B2D2B; /* Deep Maroon */
           overflow-x: hidden;
+          padding-top: 160px; /* Shift the central texts and artworks down */
           padding-bottom: 150px; /* Extra padding at the bottom */
         }
 
-        /* ─── STAMPS ─── */
         .stamp {
           position: absolute;
           z-index: 2;
           filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
           width: 25vw;
           max-width: 180px;
+          margin-top: 130px; /* Push all absolute stamps down to clear the huge navbar ribbon */
         }
         .stamp img { width: 100%; height: auto; border-radius: 4px; }
         
@@ -267,8 +266,13 @@ export default function ArtistPage() {
             margin-left: 10px; 
           }
 
+          /* Adjust container top-padding for mobile */
+          .page-container {
+            padding-top: 100px;
+          }
+
           /* Stamps pushed to the edges */
-          .stamp { width: 65px; }
+          .stamp { width: 65px; margin-top: 70px; }
           .s-magh { top: 3vh; left: 1vw; }
           .s-shravan { top: 3vh; right: 1vw; }
           .s-ashaadh { top: 18vh; left: 1vw; }

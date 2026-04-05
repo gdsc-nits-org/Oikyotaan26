@@ -1,0 +1,8 @@
+npm warn Unknown project config "public-hoist-pattern". This will stop working in the next major version of npm.
+src/app/events/components/EventCard.tsx(1,37): error TS7031: Binding element 'title' implicitly has an 'any' type.
+src/app/events/components/EventCard.tsx(1,44): error TS7031: Binding element 'description' implicitly has an 'any' type.
+src/app/events/components/EventCard.tsx(1,57): error TS7031: Binding element 'image' implicitly has an 'any' type.
+src/app/events/page.tsx(18,26): error TS2339: Property 'id' does not exist on type '{ title: string; description: string; image: string; smallText?: undefined; tightTitle?: undefined; } | { title: string; description: string; image: string; smallText: boolean; tightTitle?: undefined; } | { ...; }'.
+  Property 'id' does not exist on type '{ title: string; description: string; image: string; smallText?: undefined; tightTitle?: undefined; }'.
+src/app/navbar/page.tsx(170,44): error TS2339: Property 'accent' does not exist on type '{ label: string; href: string; }'.
+src/app/navbar/page.tsx(213,42): error TS2339: Property 'accent' does not exist on type '{ label: string; href: string; }'.

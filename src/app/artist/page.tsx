@@ -56,7 +56,16 @@ export default function ArtistPage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Bebas+Neue&family=Baloo+Da+2:wght@800&display=swap');
+        /* ─── ADDED NALUKA CUSTOM FONT ─── */
+        @font-face {
+          font-family: 'Naluka';
+          src: url('/fonts/Naluka.ttf') format('truetype'); 
+          font-weight: normal;
+          font-style: normal;
+        }
+
+        /* Keeping Baloo Da 2 for the photo placeholder text */
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@800&display=swap');
 
         .page-container {
           position: relative;
@@ -74,7 +83,7 @@ export default function ArtistPage() {
           filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
           width: 25vw;
           max-width: 180px;
-          margin-top: 130px; /* Push all absolute stamps down to clear the huge navbar ribbon */
+          margin-top: 130px; 
         }
         .stamp img { width: 100%; height: auto; border-radius: 4px; }
         
@@ -88,7 +97,7 @@ export default function ArtistPage() {
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 15px;
+          gap: 20px;
           padding-top: 50px;
           position: relative;
           z-index: 10;
@@ -97,33 +106,46 @@ export default function ArtistPage() {
         .girl-illustration {
           width: 130px;
           filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+          transform: translateY(-40px); /* Lifts the girl up relative to the text */
         }
 
-        .title-group { display: flex; flex-direction: column; }
+        .title-group { 
+          display: flex; 
+          flex-direction: column; 
+          align-items: flex-start; /* Ensures Oikyotaan aligns left with ARTIST */
+        }
 
         .event-label {
-          font-family: 'Rye', serif;
+          font-family: 'Naluka', serif;
           color: white;
-          font-size: 1.2rem;
+          font-size: 2.5rem; /* Enlarged text */
           letter-spacing: 0.1em;
+          margin-bottom: -10px; /* Pulls "ARTIST" slightly closer to the subtext */
         }
 
-        .main-title-row { display: flex; align-items: center; gap: 10px; }
+        .main-title-row { 
+          display: flex; 
+          align-items: center; 
+          gap: 10px; 
+        }
 
         .artist-text {
-          font-family: 'Bebas Neue', sans-serif;
+          font-family: 'Naluka', sans-serif;
           color: white;
-          font-size: clamp(3.5rem, 8vw, 6rem);
+          font-size: clamp(4rem, 8vw, 7rem);
           line-height: 0.85;
           text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
         }
 
-        /* Enlarged Food Icon */
+        /* Enlarged Food Icon - CSS Hack for uncropped image */
         .food-plate {
-          width: 150px;
+          width: 450px; 
           height: auto;
           object-fit: contain;
           filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
+          margin-left: -150px; 
+          margin-top: -50px; 
+          pointer-events: none; 
         }
 
         /* ─── ARTISTS GRID ─── */
@@ -131,7 +153,7 @@ export default function ArtistPage() {
           display: flex;
           justify-content: center;
           gap: 6vw;
-          margin-top: 80px; /* Increased to prevent colliding with header */
+          margin-top: 80px; 
           flex-wrap: wrap;
           padding: 0 10px;
           position: relative;
@@ -142,7 +164,7 @@ export default function ArtistPage() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-bottom: 70px; /* Increased space between stacked cards */
+          margin-bottom: 70px; 
           width: 100%;
           max-width: 400px;
         }
@@ -201,7 +223,7 @@ export default function ArtistPage() {
 
         /* ─── SOLID NAMEPLATE ─── */
         .nameplate-solid {
-          margin-top: 50px; /* FIX: Increased heavily to stop overlapping the floral border */
+          margin-top: 50px; 
           width: 85%; 
           background-color: #EFE6D5; 
           border: 3px solid #1a1a1a;
@@ -214,7 +236,7 @@ export default function ArtistPage() {
         }
 
         .nameplate-solid p {
-          font-family: 'Bebas Neue', sans-serif;
+          font-family: 'Naluka', sans-serif;
           font-size: 2.5rem;
           color: #1a1a1a;
           letter-spacing: 0.1em;
@@ -245,42 +267,48 @@ export default function ArtistPage() {
           .artists-grid {
             flex-direction: column;
             align-items: center;
-            gap: 90px; /* FIX: Massive gap between stacked cards to prevent overlapping */
-            margin-top: 60px; /* Keeps distance from the header */
+            gap: 90px; 
+            margin-top: 60px; 
           }
 
           .artist-card { max-width: 90vw; }
 
-          .girl-illustration { width: 85px; }
-          .artist-text { font-size: 3.5rem; }
+          .header-section {
+            gap: 10px;
+          }
 
-          /* Enlarged Oikyotaan text */
-          .event-label { 
-            font-size: 28px; 
-            letter-spacing: 0.1em; 
+          .girl-illustration { 
+            width: 95px; 
+            transform: translateY(-20px); /* Slightly less lift on mobile */
           }
           
-          /* Enlarged Food Icon */
+          .artist-text { font-size: 4.5rem; }
+
+          .event-label { 
+            font-size: 1.8rem; /* Appropriately scaled for mobile */
+            margin-bottom: -5px; 
+          }
+          
+          /* Fixed Food Plate hack for mobile so it fits the screen */
           .food-plate { 
-            width: 100px; 
-            margin-left: 10px; 
+            width: 250px; 
+            margin-left: -80px; 
+            margin-top: -30px;
           }
 
-          /* Adjust container top-padding for mobile */
           .page-container {
             padding-top: 100px;
           }
 
-          /* Stamps pushed to the edges */
-          .stamp { width: 65px; margin-top: 70px; }
-          .s-magh { top: 3vh; left: 1vw; }
-          .s-shravan { top: 3vh; right: 1vw; }
-          .s-ashaadh { top: 18vh; left: 1vw; }
-          .s-ashwin { top: 16vh; right: 1vw; }
+          /* Fixed Stamps: Removed top margin and pushed to the exact edges to stop overlapping */
+          .stamp { width: 70px; margin-top: 0; }
+          .s-magh { top: 12vh; left: 2vw; }
+          .s-shravan { top: 12vh; right: 2vw; }
+          .s-ashaadh { top: 32vh; left: 1vw; }
+          .s-ashwin { top: 30vh; right: 1vw; }
 
-          /* Fix nameplate margin for mobile */
           .nameplate-solid { 
-            margin-top: 55px; /* Ensures it totally clears the bottom flowers */
+            margin-top: 55px; 
             padding: 8px 15px; 
           }
           .nameplate-solid p { font-size: 2rem; }
@@ -308,6 +336,7 @@ export default function ArtistPage() {
           <div className="title-group">
             <span className="event-label">Oikyotaan 26&apos;</span>
             <div className="main-title-row">
+            
               <h1 className="artist-text">ARTIST</h1>
               <img
                 src="/images/food-icon.png"

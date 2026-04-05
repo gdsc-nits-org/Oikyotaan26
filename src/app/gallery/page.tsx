@@ -9,7 +9,7 @@ const Frame = ({ src, alt, extraClasses = "" }: { src?: string; alt?: string, ex
       className={`relative w-[12rem] md:w-[20rem] shrink-0 ${extraClasses}`}
       style={{ WebkitBackfaceVisibility: 'hidden', transform: 'translateZ(0)' }} 
     >
-     <Image 
+     <img 
   src={src ?? "/photog/Frame1.png"} 
   alt={alt ?? "Oikyotaan Gallery Photo"} 
   className="block h-auto w-full object-contain border-[2px] border-transparent" 
@@ -128,10 +128,10 @@ export default function PhotoGallery() {
 
       {/* Header Section */}
       <header className="relative mx-auto w-full max-w-7xl px-4 pt-12 pb-8 text-center flex flex-col items-center">
-        <Image alt='' src="/photog/image20.png" className="animate-float absolute left-2 sm:left-4 lg:left-8 top-10 sm:top-12 lg:top-16 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '-15deg' } as React.CSSProperties} />
-        <Image alt='' src="/photog/image25.png" className="animate-float absolute left-1 sm:left-12 lg:left-24 top-28 sm:top-36 md:top-44 lg:top-52 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '-5deg', animationDelay: '1s' } as React.CSSProperties} />
-        <Image alt='' src="/photog/image23.png" className="animate-float absolute right-4 sm:right-16 lg:right-28 top-20 sm:top-24 lg:top-30 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '15deg', animationDelay: '0.5s' } as React.CSSProperties} />
-        <Image alt='' src="/photog/image17.png" className="animate-float absolute right-2 sm:right-4 lg:right-8 top-48 sm:top-56 md:top-64 lg:top-72 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '5deg', animationDelay: '1.5s' } as React.CSSProperties} />
+        <img alt='' src="/photog/image20.png" className="animate-float absolute left-2 sm:left-4 lg:left-8 top-10 sm:top-12 lg:top-16 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '-15deg' } as React.CSSProperties} />
+        <img alt='' src="/photog/image25.png" className="animate-float absolute left-1 sm:left-12 lg:left-24 top-28 sm:top-36 md:top-44 lg:top-52 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '-5deg', animationDelay: '1s' } as React.CSSProperties} />
+        <img alt='' src="/photog/image23.png" className="animate-float absolute right-4 sm:right-16 lg:right-28 top-20 sm:top-24 lg:top-30 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '15deg', animationDelay: '0.5s' } as React.CSSProperties} />
+        <img alt='' src="/photog/image17.png" className="animate-float absolute right-2 sm:right-4 lg:right-8 top-48 sm:top-56 md:top-64 lg:top-72 w-16 sm:w-24 md:w-32 lg:w-34 h-auto object-contain" style={{ '--rotation': '5deg', animationDelay: '1.5s' } as React.CSSProperties} />
 
         <div className="relative z-10 mx-auto inline-flex flex-col items-center">
           <h2 className="mt-12 md:mt-20 -mb-10 md:-mb-37 font-normal text-sm md:text-xl uppercase tracking-[0.2em] text-[#f0eadd] self-start " style={{ fontFamily: 'Naluka, serif' }}>
@@ -142,7 +142,7 @@ export default function PhotoGallery() {
             <span className="mt-8 md:mt-35">PHOTO </span>
             
             <div className="relative -mx-2 md:-mx-5 flex h-28 w-28 md:h-75 md:w-76 shrink-0 items-center justify-center overflow-hidden">
-               <Image src="/photog/god.png" alt="Center Fig" className="h-full w-full object-contain" />
+               <img src="/photog/god.png" alt="Center Fig" className="h-full w-full object-contain" />
             </div> 
             
             <span className="text-3xl md:text-4xl lg:text-6xl mt-8 md:mt-35 -ml-2 md:-ml-7">26&apos;</span>
@@ -152,7 +152,7 @@ export default function PhotoGallery() {
           </h1>
           
           <div className="absolute -bottom-10 sm:-bottom-[10%] lg:-bottom-[10%] -left-[5%] sm:-left-[8%] lg:-left-[10%] flex w-20 sm:w-32 md:w-40 lg:w-45 h-auto -rotate-12 items-center justify-center">
-             <Image src="/photog/Group.png" alt="Owl Mask" className="h-auto w-full object-contain" />
+             <img src="/photog/Group.png" alt="Owl Mask" className="h-auto w-full object-contain" />
           </div>
         </div>
       </header>

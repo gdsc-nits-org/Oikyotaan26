@@ -1,10 +1,10 @@
 // src/app/events/page.tsx
 import HeroSection from "./components/HeroSection";
 import EventCard from "./components/EventCard";
-import eventsData from "../../data/events.json"; 
+import eventsData from "../../data/events.json";
 
 type Event = {
-  id?: string; 
+  id?: string;
   title: string;
   description: string;
   image?: string;
@@ -13,7 +13,7 @@ type Event = {
 };
 
 export default function EventsPage() {
-  const events: Event[] = Array.isArray(eventsData) ? eventsData : [];
+  const events = (Array.isArray(eventsData) ? eventsData : []) as Event[];
 
   return (
     <main className="w-full min-h-screen bg-[#8A3123] overflow-x-hidden">
@@ -22,17 +22,17 @@ export default function EventsPage() {
       {/* 1. items-start pins the cards to the LEFT side xyz */}
       {/* 2. pl-[20px] lg:pl-[80px] sets the distance from the left edge */}
       <section className="w-full flex flex-col items-center gap-1 md:gap-2 py-16 md:py-24 px-4">
-          {events.map((event: any, index: number) => (
-            <EventCard
-              key={event.id || event.title || index}
-              title={event.title}
-              description={event.description}
-              image={event.image ?? "/events/girl.svg"}
-              reverse={index % 2 !== 0}
-              smallText={event.smallText} 
-              tightTitle={event.tightTitle}
-            />
-          ))}
+        {events.map((event, index) => (
+          <EventCard
+            key={event.id ?? event.title ?? index}
+            title={event.title ?? ""}
+            description={event.description ?? ""}
+            image={event.image ?? "/events/girl.svg"}
+            reverse={index % 2 !== 0}
+            smallText={event.smallText ?? false}
+            tightTitle={event.tightTitle ?? false}
+          />
+        ))}
       </section>
     </main>
   );

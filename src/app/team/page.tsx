@@ -1,5 +1,7 @@
 import team from "../../data/team.json";
 import uiux from "../../data/core.json";
+import techhead from "../../data/techHead.json";
+import stucoord from "../../data/coord.json";
 import TeamCard from "./components/TeamCard";
 // import Image from "next/image";
 
@@ -33,15 +35,13 @@ export default function Home() {
         </div>
 
       </div>
-      <div>
-        <img
-          src="https://res.cloudinary.com/dsaaxuphe/image/upload/v1774888699/Group_1000006182_tllx72.png"
-          alt="right"
-          className="w-full mt-12"
 
-        />
+      <img
+        src="https://res.cloudinary.com/dsaaxuphe/image/upload/v1774888699/Group_1000006182_1_z3kcdp.png"
+        alt="right"
+        className=" w-full mt-36"
 
-      </div>
+      />
       <div className="flex justify-center ">
         <div className="grid grid-cols-2 mt-10 sm:grid-cols-3  ">
           {team.map((member, index) => (
@@ -58,15 +58,83 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      {/* SECTION TITLE */}
+          <div className="flex flex-col items-center mt-10">
+            <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
+              Student Coordinator
+            </h2>
+
+            {/* Underline */}
+            <div className="w-24 h-[2px] bg-[#FFB000] mt-2 rounded"></div>
+          </div>
+
+      <div className="flex justify-center ">
+        <div className="grid grid-cols-2 mt-10 sm:grid-cols-3  ">
+          {stucoord.map((member, index) => (
+            <TeamCard
+              key={index}
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              instagram={member.instagram}
+              linkedin={member.linkedin}
+              github={member.github}
+
+            />
+          ))}
+        </div>
+      </div>
+
       <div>
 
 
-        <img
-          src="https://res.cloudinary.com/dsaaxuphe/image/upload/v1774888699/Group_1000006182_1_z3kcdp.png"
-          alt="right"
-          className=" w-full mt-36"
+        <div>
+          <img
+            src="https://res.cloudinary.com/dsaaxuphe/image/upload/v1774888699/Group_1000006182_tllx72.png"
+            alt="right"
+            className="w-full mt-12"
+          />
 
-        />
+          {/* SECTION TITLE */}
+          <div className="flex flex-col items-center mt-10">
+            <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
+              Tech Heads
+            </h2>
+
+            {/* Underline */}
+            <div className="w-24 h-[2px] bg-[#FFB000] mt-2 rounded"></div>
+          </div>
+
+          {/* CARDS */}
+          <div className="flex justify-center mt-10">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 px-4">
+              {techhead.map((member, index) => (
+                <TeamCard
+                  key={index}
+                  name={member.name}
+                  role={member.role}
+                  image={member.image}
+                  instagram={member.instagram}
+                  linkedin={member.linkedin}
+                  github={member.github}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+         {/* SECTION TITLE */}
+          <div className="flex flex-col items-center mt-10">
+            <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
+              Developers
+            </h2>
+
+            {/* Underline */}
+            <div className="w-24 h-[2px] bg-[#FFB000] mt-2 rounded"></div>
+          </div>
+
+
         <div className="flex justify-center mt-24 ">
           <div className="grid grid-cols-2 sm:grid-cols-3 ">
             {uiux.map((member, index) => (
@@ -82,8 +150,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-
       </div>
+
+      {/* </div> */}
 
 
     </main>

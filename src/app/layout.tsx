@@ -9,7 +9,7 @@ import { Geist } from "next/font/google";
 export const metadata: Metadata = {
   title: "Oikyotaan 2026",
   description: "Oikyotaan 2026",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/landing/logo.png" }],
   viewport: "width=device-width, initial-scale=1.0",
 };
 

@@ -1,0 +1,42 @@
+[
+    {
+    "name":"Subhajyoti Dey",
+    "role": " Web Head",
+    "image": "https://res.cloudinary.com/dsaaxuphe/image/upload/v1774865439/IMG_20260321_232814_767_-_Subhajyoti_Dey_hboqcu.webp",
+    "instagram": "https://www.instagram.com/subhajyoti_dey_?igsh=MW8yZ2RxNDA1a2lk",
+    "linkedin": "https://www.linkedin.com/in/subhajyoti-dey-635922235",
+    "github":"https://github.com/SubhaNITS150"
+  },
+  {
+    "name": "Dhananjoy Das",
+    "role": " Web Head",
+    "image": "https://res.cloudinary.com/dsaaxuphe/image/upload/v1774864503/6D6E3E6C-8A1B-42D4-94D3-F29D4B9C0FA5_-_DHANANJAY_DAS_dwonrz.jpg",
+    "instagram": "https://www.instagram.com/_.dhananjoy?igsh=OWdsc2RqeXpqeWls&utm_source=qr",
+    "linkedin": "https://www.linkedin.com/in/dhananjoydas733?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "github":"https://github.com/joycrypt"
+  },
+  {
+    "name": "Kaushik Bhowmick",
+    "role": " UI/UX Head",
+    "image": "https://res.cloudinary.com/dsaaxuphe/image/upload/v1774865439/WhatsApp_Image_2026-03-30_at_9.23.35_AM_qvevtz.jpg",
+    "instagram":"error",
+    "linkedin": "https://www.linkedin.com/in/kaushik-bhowmick-922b26282/?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "github":"https://github.com/kaushik9859"
+  },
+  {
+    "name": "Sibajit Mazumder",
+    "role": " Web Head",
+    "image": "https://res.cloudinary.com/dsaaxuphe/image/upload/v1774865439/Sibajit_Mazumdar.jpg_petzf2.jpg",
+    "instagram": "https://www.instagram.com/siibajit_maz.808?igsh=MW5zY21lMm00emkwNg==",
+    "linkedin":"error",
+    "github":"https://github.com/kaneki-desu"
+  },
+  {
+    "name": "Piyush Saha",
+    "role": " UI/UX Head",
+    "image": "https://res.cloudinary.com/dffke2hbp/image/upload/v1775412599/photo_2026-04-05_23-39-50_ezprsw.jpg",
+    "instagram": "/",
+    "linkedin":"error",
+    "github":"/"
+  }
+]

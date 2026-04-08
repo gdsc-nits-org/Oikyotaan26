@@ -1,38 +1,98 @@
 "use client";
 
-const ArtistCard = ({ name, image }: { name: string; image: string }) => (
-  <div className="artist-card">
-    <div className="frame-wrap">
-      {/* DECORATIONS */}
-      <div className="lotus-decor-left">
-        <img src="/images/lotus-decor.png" alt="" />
-      </div>
+import { useRef, useState } from "react";
 
-      <div className="frame-container">
-        <div className="frame-inner-bg">
-          <img src={image} alt={name} className="artist-photo" />
+const ArtistCard = ({
+  name,
+  image,
+  audio,
+}: {
+  name: string;
+  image: string;
+  audio: string;
+}) => {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = async () => {
+    if (!audioRef.current) return;
+
+    if (audioRef.current.paused) {
+      document.querySelectorAll("audio").forEach((a) => {
+        if (a !== audioRef.current) {
+          a.pause();
+          a.currentTime = 0;
+        }
+      });
+
+      try {
+        await audioRef.current.play();
+        setIsPlaying(true);
+      } catch (err) {
+        console.error("Play failed:", err);
+      }
+    } else {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  return (
+    <div className="artist-card">
+      <div className="frame-wrap">
+        {/* DECORATIONS */}
+        <div className="lotus-decor-left">
+          <img src="/images/lotus-decor.png" alt="" />
         </div>
 
-        {/* BORDER: Stays on top */}
-        <img
-          src="/images/Group 1000006211.png"
-          alt="Ornate Border"
-          className="frame-border-img"
-        />
+        <div className="frame-container">
+          <div className="frame-inner-bg">
+            <img
+              src={image}
+              alt={name}
+              className="artist-photo cursor-pointer"
+              onClick={handlePlay}
+            />
+
+            <div className="hover-overlay">
+              {isPlaying ? (
+                // Pause Icon
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="white">
+                  <rect x="6" y="5" width="4" height="14" />
+                  <rect x="14" y="5" width="4" height="14" />
+                </svg>
+              ) : (
+                // Play Icon
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="white">
+                  <polygon points="5,3 19,12 5,21" />
+                </svg>
+              )}
+            </div>
+          </div>
+
+          <img
+            src="/images/Group 1000006211.png"
+            alt="Ornate Border"
+            className="frame-border-img"
+          />
+        </div>
+
+        <div className="lotus-decor-right">
+          <img src="/images/lotus.png" alt="" />
+        </div>
       </div>
 
-      <div className="lotus-decor-right">
-        <img src="/images/lotus.png" alt="" />
+      {/* AUDIO ELEMENT */}
+      <audio ref={audioRef} src={audio} />
+
+      <div className="nameplate-solid">
+        <span className="dot"></span>
+        <p>{name}</p>
+        <span className="dot"></span>
       </div>
     </div>
-
-    <div className="nameplate-solid">
-      <span className="dot"></span>
-      <p>{name}</p>
-      <span className="dot"></span>
-    </div>
-  </div>
-);
+  );
+};
 
 export default function ArtistPage() {
   return (
@@ -128,6 +188,29 @@ export default function ArtistPage() {
     margin-top: -50px;
     pointer-events: none;
   }
+
+  .hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Baloo Da 2', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.frame-inner-bg:hover .hover-overlay {
+  opacity: 1;
+}
 
   /* ─── ARTISTS GRID ─── */
   .artists-grid {
@@ -339,11 +422,13 @@ export default function ArtistPage() {
           <ArtistCard
             name="Cactus"
             image="https://res.cloudinary.com/dludtk5vz/image/upload/q_auto/f_auto/v1775499838/5991e367-a064-471a-a597-35023d118db3_xkhsm8.jpg"
+            audio="https://res.cloudinary.com/dludtk5vz/video/upload/q_auto/f_auto/v1775663151/_Halud_Pakhi_Ringtone__by_Fringster.com_imxedx.mp3"
           />
-          <ArtistCard
+          {/* <ArtistCard
             name="Artist Name"
             image="https://res.cloudinary.com/dludtk5vz/image/upload/q_auto/f_auto/v1775499838/5991e367-a064-471a-a597-35023d118db3_xkhsm8.jpg"
-          />
+            audio="https://res.cloudinary.com/dludtk5vz/video/upload/q_auto/f_auto/v1775663151/_Halud_Pakhi_Ringtone__by_Fringster.com_imxedx.mp3"
+          /> */}
         </section>
 
         {/* INSTRUMENTS (BOTTOM LEFT) */}

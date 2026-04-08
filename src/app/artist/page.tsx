@@ -342,7 +342,7 @@ export default function ArtistPage() {
           />
           <ArtistCard
             name="Artist Name"
-            image="https://res.cloudinary.com/dludtk5vz/image/upload/q_auto/f_auto/v1775499838/5991e367-a064-471a-a597-35023d118db3_xkhsm8.jpg"
+            image="https://res.cloudinary.com/dffke2hbp/image/upload/v1775632288/coming-soon-business-sign-free-vector_b0qnbz.webp"
           />
         </section>
 

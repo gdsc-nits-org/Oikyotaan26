@@ -3,7 +3,7 @@ import HeroSection from "~/components/landing/HeroSection";
 import AboutSection from "~/components/landing/AboutSection";
 import AboutOikyotaan from "~/components/landing/AboutOikyotaan";
 import SponsorsSection from "~/components/landing/SponsorsSection";
-import Footer from "~/components/landing/Footer";
+
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <AboutSection />
       <AboutOikyotaan />
       <SponsorsSection />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

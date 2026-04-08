@@ -2,17 +2,17 @@
   {
     "title": "Morning Rally",
     "description": "The Morning Rally marks the grand awakening of Oikyotaan’26. As the sun rises, we join together in a vibrant procession, draped in our finest ethnic attire to honor our roots. With every step and every beat of the dhak, we celebrate the spirit of unity and heritage. Come, walk with us and let the celebration begin with heart and soul!",
-    "image": "/events/girl.svg"
+    "image": "https://res.cloudinary.com/dludtk5vz/image/upload/q_auto/f_auto/v1775563522/_DSC0458-3_jp5dtz.jpg"
   },
   {
     "title": "Shokaler Adda",
     "description": "​As the morning mist lifts, join us for the soul of Oikyotaan’26—the Shokaler Adda. This isn't just a gathering; it’s a revival of our most cherished tradition. Over steaming cups of tea and the gentle strumming of a guitar, we bridge generations through poetry, debate, and laughter. Come share a story or find a new one in this sanctuary of culture and timeless conversation.",
-    "image": "/events/girl.svg"
+    "image": "https://res.cloudinary.com/dludtk5vz/image/upload/q_auto/f_auto/v1775564265/_DSC0514-2_gid8f5.jpg"
   },
   {
     "title": "Student and Faculty performance ",
     "description": "At Oikyotaan’26, the boundary between the classroom and the stage vanishes. Our Student & Faculty Performance is a rare glimpse into the artistic hearts of our academic community. From soulful vocal duets to vibrant folk dances, this showcase proves that brilliance isn't just found in textbooks—it’s alive in the rhythmic pulse of our shared heritage. Come witness the magic of mentorship meeting creativity in every note.",
-    "image": "/events/girl.svg",
+    "image": "https://res.cloudinary.com/dludtk5vz/image/upload/q_auto/f_auto/v1775563941/IMG_9991-2_1_oifuw4.jpg",
     "smallText": true
   },
   {
@@ -33,7 +33,7 @@
   {
     "title": "Ramp walk",
     "description": "To the rhythmic pulse of tradition and the soft rustle of silk, we invite you to the Ramp Walk.This is not your typical runway; it is a rhythmic journey through the soul of our traditions. The Ramp Walk at Oikyotaan’26 transforms the stage into a living canvas, where every drape of a saree and every fold of a dhoti narrates a story of our heritage. Watch as elegance meets energy, proving that our roots are the most timeless fashion statement of all.",
-    "image": "/events/girl.svg",
+    "image": "https://res.cloudinary.com/dludtk5vz/image/upload/q_auto/f_auto/v1775564886/_DSC0090-Enhanced-NR_soob9f.jpg",
     "smallText": true
   }
 ]

@@ -13,7 +13,6 @@ export default function Home() {
       <AboutSection />
       <AboutOikyotaan />
       <SponsorsSection />
-      <Footer />
     </main>
   );
 }

@@ -3,6 +3,8 @@ import Navbar from "./navbar/page";
 
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
+import Loader from "./loader";
+import Footer from "~/components/landing/Footer";
 
 // import { TRPCReactProvider } from "~/trpc/react";
 
@@ -24,8 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>
-        <Navbar />
-        {children}
+        <Loader>
+          <Navbar />
+          {children}
+          <Footer/>
+        </Loader>
       </body>
     </html>
   );

@@ -5,7 +5,6 @@ import Navbar from "./navbar/page";
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 import Loader from "./loader";
-import Footer from "~/components/landing/Footer";
 
 // import { TRPCReactProvider } from "~/trpc/react";
 

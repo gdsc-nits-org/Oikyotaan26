@@ -7,8 +7,6 @@ type EventCardProps = {
   tightTitle?: boolean;
 };
 
-// import Image from "next/image";
-
 export default function EventCard({ title, description, image, reverse = false, smallText = false, tightTitle = false }: EventCardProps) {
   return (
     <div className="w-full flex justify-center -mb-20 min-[390px]:-mb-15 md:mb-0">

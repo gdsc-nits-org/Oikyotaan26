@@ -1,3 +1,4 @@
+import Footer from "~/components/landing/Footer";
 import "../styles/globals.css"
 import Navbar from "./navbar/page";
 
